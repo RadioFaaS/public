@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SensorModuleApp64M1", "SensorModuleApp64M1_6_1(1).cproj", "{0ACBF226-F97E-4246-9777-0B89989777AD}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SensorModuleWirelessBoot", "..\..\SensorModuleWirelessBoot\SensorModuleWirelessBoot_6_1(1).cproj", "{286999E6-6F90-4EA6-BC42-4124251A64A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ACBF226-F97E-4246-9777-0B89989777AD}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0ACBF226-F97E-4246-9777-0B89989777AD}.Debug|AVR.Build.0 = Debug|AVR
+		{0ACBF226-F97E-4246-9777-0B89989777AD}.Release|AVR.ActiveCfg = Release|AVR
+		{0ACBF226-F97E-4246-9777-0B89989777AD}.Release|AVR.Build.0 = Release|AVR
+		{286999E6-6F90-4EA6-BC42-4124251A64A7}.Debug|AVR.ActiveCfg = Debug|AVR
+		{286999E6-6F90-4EA6-BC42-4124251A64A7}.Debug|AVR.Build.0 = Debug|AVR
+		{286999E6-6F90-4EA6-BC42-4124251A64A7}.Release|AVR.ActiveCfg = Release|AVR
+		{286999E6-6F90-4EA6-BC42-4124251A64A7}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

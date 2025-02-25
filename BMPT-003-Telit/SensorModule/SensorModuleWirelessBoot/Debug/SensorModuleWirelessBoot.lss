@@ -1,0 +1,2746 @@
+
+SensorModuleWirelessBoot.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000006  00800100  0000f3b2  000014a6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000013b2  0000e000  0000e000  000000f4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000002e2  00800106  00800106  000014ac  2**0
+                  ALLOC
+  3 .eeprom       00000800  00810000  00810000  000014ac  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .fuse         00000003  00820000  00820000  00001cac  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .lock         00000001  00830000  00830000  00001caf  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .comment      00000030  00000000  00000000  00001cb0  2**0
+                  CONTENTS, READONLY
+  7 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001ce0  2**2
+                  CONTENTS, READONLY
+  8 .debug_aranges 00000220  00000000  00000000  00001d20  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   00002ecd  00000000  00000000  00001f40  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 00001419  00000000  00000000  00004e0d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000016f0  00000000  00000000  00006226  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  000004c4  00000000  00000000  00007918  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    0000146c  00000000  00000000  00007ddc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00000fbb  00000000  00000000  00009248  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_ranges 00000188  00000000  00000000  0000a203  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+0000e000 <__vectors>:
+    e000:	0c 94 ff 70 	jmp	0xe1fe	; 0xe1fe <__ctors_end>
+    e004:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e008:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e00c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e010:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e014:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e018:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e01c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e020:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e024:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e028:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e02c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e030:	0c 94 e0 73 	jmp	0xe7c0	; 0xe7c0 <__vector_12>
+    e034:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e038:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e03c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e040:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e044:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e048:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e04c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e050:	0c 94 e1 76 	jmp	0xedc2	; 0xedc2 <__vector_20>
+    e054:	0c 94 af 76 	jmp	0xed5e	; 0xed5e <__vector_21>
+    e058:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e05c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e060:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e064:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e068:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e06c:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e070:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e074:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e078:	0c 94 1c 71 	jmp	0xe238	; 0xe238 <__bad_interrupt>
+    e07c:	95 71       	andi	r25, 0x15	; 21
+    e07e:	99 71       	andi	r25, 0x19	; 25
+    e080:	b4 71       	andi	r27, 0x14	; 20
+    e082:	ba 71       	andi	r27, 0x1A	; 26
+    e084:	c0 71       	andi	r28, 0x10	; 16
+    e086:	cd 71       	andi	r28, 0x1D	; 29
+    e088:	ee 71       	andi	r30, 0x1E	; 30
+    e08a:	a8 71       	andi	r26, 0x18	; 24
+    e08c:	d3 77       	andi	r29, 0x73	; 115
+    e08e:	f5 77       	andi	r31, 0x75	; 117
+    e090:	fb 77       	andi	r31, 0x7B	; 123
+    e092:	06 78       	andi	r16, 0x86	; 134
+    e094:	0c 78       	andi	r16, 0x8C	; 140
+    e096:	12 78       	andi	r17, 0x82	; 130
+    e098:	3e 78       	andi	r19, 0x8E	; 142
+    e09a:	44 78       	andi	r20, 0x84	; 132
+    e09c:	4a 78       	andi	r20, 0x8A	; 138
+    e09e:	50 78       	andi	r21, 0x80	; 128
+    e0a0:	56 78       	andi	r21, 0x86	; 134
+    e0a2:	5c 78       	andi	r21, 0x8C	; 140
+    e0a4:	62 78       	andi	r22, 0x82	; 130
+    e0a6:	68 78       	andi	r22, 0x88	; 136
+    e0a8:	6e 78       	andi	r22, 0x8E	; 142
+    e0aa:	74 78       	andi	r23, 0x84	; 132
+    e0ac:	7a 78       	andi	r23, 0x8A	; 138
+    e0ae:	c6 78       	andi	r28, 0x86	; 134
+    e0b0:	cc 78       	andi	r28, 0x8C	; 140
+    e0b2:	f3 78       	andi	r31, 0x83	; 131
+    e0b4:	3d 79       	andi	r19, 0x9D	; 157
+    e0b6:	1b 79       	andi	r17, 0x9B	; 155
+    e0b8:	26 79       	andi	r18, 0x96	; 150
+
+0000e0ba <FwVersion>:
+    e0ba:	55 6e 6b 6e 6f 77 6e 00 00                          Unknown..
+
+0000e0c3 <FwPartNum>:
+    e0c3:	35 30 31 30 31 30 2d 30 30 30 30 36 34 00 00 00     501010-000064...
+	...
+
+0000e0d4 <setFlowControlCommand>:
+    e0d4:	41 54 26 52 31 0d 0a 00                             AT&R1...
+
+0000e0dc <setBaudRateCommand2>:
+    e0dc:	41 54 42 3d 33 38 34 30 30 2c 38 2c 6e 2c 31 0d     ATB=38400,8,n,1.
+    e0ec:	0a 00                                               ..
+
+0000e0ee <udpBulkTransferSeq>:
+    e0ee:	1b 5a 00                                            .Z.
+
+0000e0f1 <startUdpServerCommand>:
+    e0f1:	41 54 2b 4e 53 55 44 50 3d 34 31 35 30 30 0d 0a     AT+NSUDP=41500..
+	...
+
+0000e102 <closeAllConnectionsCommand>:
+    e102:	41 54 2b 4e 43 4c 4f 53 45 41 4c 4c 0d 0a 00        AT+NCLOSEALL...
+
+0000e111 <udpOutConnectCommand>:
+    e111:	41 54 2b 4e 43 55 44 50 3d 31 39 32 2e 31 36 38     AT+NCUDP=192.168
+    e121:	2e 31 2e 32 35 35 2c 34 31 35 30 31 0d 0a 00        .1.255,41501...
+
+0000e130 <setBulkTransfer>:
+    e130:	41 54 2b 42 44 41 54 41 3d 31 0d 0a 00              AT+BDATA=1...
+
+0000e13d <setDHCPServerCommand>:
+    e13d:	41 54 2b 44 48 43 50 53 52 56 52 3d 31 0d 0a 00     AT+DHCPSRVR=1...
+
+0000e14d <setNetParamsCommand>:
+    e14d:	41 54 2b 4e 53 45 54 3d 31 39 32 2e 31 36 38 2e     AT+NSET=192.168.
+    e15d:	31 2e 31 2c 32 35 35 2e 32 35 35 2e 32 35 35 2e     1.1,255.255.255.
+    e16d:	30 2c 31 39 32 2e 31 36 38 2e 31 2e 31 0d 0a 00     0,192.168.1.1...
+
+0000e17d <setDHCPCommand>:
+    e17d:	41 54 2b 4e 44 48 43 50 3d 31 0d 0a 00              AT+NDHCP=1...
+
+0000e18a <setSSIDCommand>:
+    e18a:	41 54 2b 57 41 3d 00                                AT+WA=.
+
+0000e191 <setEchoDisableCommand>:
+    e191:	41 54 45 30 0d 0a 00                                ATE0...
+
+0000e198 <setVerboseEnableCommand>:
+    e198:	41 54 56 31 0d 0a 00                                ATV1...
+
+0000e19f <setATSyncCommand>:
+    e19f:	0d 0a 0d 0a 41 54 0d 0a 00                          ....AT...
+
+0000e1a8 <setKeepAliveCommand>:
+    e1a8:	41 54 2b 50 53 50 4f 4c 4c 49 4e 54 52 4c 3d 30     AT+PSPOLLINTRL=0
+    e1b8:	0d 0a 00                                            ...
+
+0000e1bb <setTransmitPowerCommand>:
+    e1bb:	41 54 2b 57 50 3d 30 0d 0a 00                       AT+WP=0...
+
+0000e1c5 <setRadioOpEnableCommand>:
+    e1c5:	41 54 2b 57 52 58 41 43 54 49 56 45 3d 31 0d 0a     AT+WRXACTIVE=1..
+	...
+
+0000e1d6 <setSecurityCommand>:
+    e1d6:	41 54 2b 57 53 45 43 3d 31 0d 0a 00                 AT+WSEC=1...
+
+0000e1e2 <setOpModeCommand>:
+    e1e2:	41 54 2b 57 4d 3d 32 0d 0a 00                       AT+WM=2...
+
+0000e1ec <setRegulatoryDomainCommand>:
+    e1ec:	41 54 2b 57 52 45 47 44 4f 4d 41 49 4e 3d 30 0d     AT+WREGDOMAIN=0.
+    e1fc:	0a 00                                               ..
+
+0000e1fe <__ctors_end>:
+    e1fe:	11 24       	eor	r1, r1
+    e200:	1f be       	out	0x3f, r1	; 63
+    e202:	cf ef       	ldi	r28, 0xFF	; 255
+    e204:	d0 e1       	ldi	r29, 0x10	; 16
+    e206:	de bf       	out	0x3e, r29	; 62
+    e208:	cd bf       	out	0x3d, r28	; 61
+
+0000e20a <__do_copy_data>:
+    e20a:	11 e0       	ldi	r17, 0x01	; 1
+    e20c:	a0 e0       	ldi	r26, 0x00	; 0
+    e20e:	b1 e0       	ldi	r27, 0x01	; 1
+    e210:	e2 eb       	ldi	r30, 0xB2	; 178
+    e212:	f3 ef       	ldi	r31, 0xF3	; 243
+    e214:	02 c0       	rjmp	.+4      	; 0xe21a <__do_copy_data+0x10>
+    e216:	05 90       	lpm	r0, Z+
+    e218:	0d 92       	st	X+, r0
+    e21a:	a6 30       	cpi	r26, 0x06	; 6
+    e21c:	b1 07       	cpc	r27, r17
+    e21e:	d9 f7       	brne	.-10     	; 0xe216 <__do_copy_data+0xc>
+
+0000e220 <__do_clear_bss>:
+    e220:	23 e0       	ldi	r18, 0x03	; 3
+    e222:	a6 e0       	ldi	r26, 0x06	; 6
+    e224:	b1 e0       	ldi	r27, 0x01	; 1
+    e226:	01 c0       	rjmp	.+2      	; 0xe22a <.do_clear_bss_start>
+
+0000e228 <.do_clear_bss_loop>:
+    e228:	1d 92       	st	X+, r1
+
+0000e22a <.do_clear_bss_start>:
+    e22a:	a8 3e       	cpi	r26, 0xE8	; 232
+    e22c:	b2 07       	cpc	r27, r18
+    e22e:	e1 f7       	brne	.-8      	; 0xe228 <.do_clear_bss_loop>
+    e230:	0e 94 12 74 	call	0xe824	; 0xe824 <main>
+    e234:	0c 94 d7 79 	jmp	0xf3ae	; 0xf3ae <_exit>
+
+0000e238 <__bad_interrupt>:
+    e238:	0c 94 00 70 	jmp	0xe000	; 0xe000 <__vectors>
+
+0000e23c <addByteToChecksum>:
+}
+
+
+void transmitTcpAsipMessage(void)
+{
+    sendTcpPacket(&outgoingMsg);
+    e23c:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <runningCS1>
+    e240:	30 91 19 01 	lds	r19, 0x0119	; 0x800119 <runningCS1+0x1>
+    e244:	a9 01       	movw	r20, r18
+    e246:	48 0f       	add	r20, r24
+    e248:	51 1d       	adc	r21, r1
+    e24a:	ca 01       	movw	r24, r20
+    e24c:	4f 3f       	cpi	r20, 0xFF	; 255
+    e24e:	51 05       	cpc	r21, r1
+    e250:	19 f0       	breq	.+6      	; 0xe258 <addByteToChecksum+0x1c>
+    e252:	10 f0       	brcs	.+4      	; 0xe258 <addByteToChecksum+0x1c>
+    e254:	8f 5f       	subi	r24, 0xFF	; 255
+    e256:	91 09       	sbc	r25, r1
+    e258:	90 93 19 01 	sts	0x0119, r25	; 0x800119 <runningCS1+0x1>
+    e25c:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <runningCS1>
+    e260:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <runningCS1>
+    e264:	30 91 19 01 	lds	r19, 0x0119	; 0x800119 <runningCS1+0x1>
+    e268:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <runningCS2>
+    e26c:	90 91 17 01 	lds	r25, 0x0117	; 0x800117 <runningCS2+0x1>
+    e270:	82 0f       	add	r24, r18
+    e272:	93 1f       	adc	r25, r19
+    e274:	8f 3f       	cpi	r24, 0xFF	; 255
+    e276:	91 05       	cpc	r25, r1
+    e278:	19 f0       	breq	.+6      	; 0xe280 <addByteToChecksum+0x44>
+    e27a:	10 f0       	brcs	.+4      	; 0xe280 <addByteToChecksum+0x44>
+    e27c:	8f 5f       	subi	r24, 0xFF	; 255
+    e27e:	91 09       	sbc	r25, r1
+    e280:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <runningCS2+0x1>
+    e284:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <runningCS2>
+    e288:	20 93 26 01 	sts	0x0126, r18	; 0x800126 <Msg_CS1>
+    e28c:	80 91 16 01 	lds	r24, 0x0116	; 0x800116 <runningCS2>
+    e290:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <Msg_CS2>
+    e294:	08 95       	ret
+
+0000e296 <resetChecksum>:
+    e296:	8f ef       	ldi	r24, 0xFF	; 255
+    e298:	90 e0       	ldi	r25, 0x00	; 0
+    e29a:	90 93 19 01 	sts	0x0119, r25	; 0x800119 <runningCS1+0x1>
+    e29e:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <runningCS1>
+    e2a2:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <runningCS2+0x1>
+    e2a6:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <runningCS2>
+    e2aa:	8f ef       	ldi	r24, 0xFF	; 255
+    e2ac:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <Msg_CS1>
+    e2b0:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <Msg_CS2>
+    e2b4:	08 95       	ret
+
+0000e2b6 <transmitAddByteToChecksum>:
+    e2b6:	20 91 14 01 	lds	r18, 0x0114	; 0x800114 <transmitRunningChecksum1>
+    e2ba:	30 91 15 01 	lds	r19, 0x0115	; 0x800115 <transmitRunningChecksum1+0x1>
+    e2be:	a9 01       	movw	r20, r18
+    e2c0:	48 0f       	add	r20, r24
+    e2c2:	51 1d       	adc	r21, r1
+    e2c4:	ca 01       	movw	r24, r20
+    e2c6:	4f 3f       	cpi	r20, 0xFF	; 255
+    e2c8:	51 05       	cpc	r21, r1
+    e2ca:	19 f0       	breq	.+6      	; 0xe2d2 <transmitAddByteToChecksum+0x1c>
+    e2cc:	10 f0       	brcs	.+4      	; 0xe2d2 <transmitAddByteToChecksum+0x1c>
+    e2ce:	8f 5f       	subi	r24, 0xFF	; 255
+    e2d0:	91 09       	sbc	r25, r1
+    e2d2:	90 93 15 01 	sts	0x0115, r25	; 0x800115 <transmitRunningChecksum1+0x1>
+    e2d6:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <transmitRunningChecksum1>
+    e2da:	20 91 14 01 	lds	r18, 0x0114	; 0x800114 <transmitRunningChecksum1>
+    e2de:	30 91 15 01 	lds	r19, 0x0115	; 0x800115 <transmitRunningChecksum1+0x1>
+    e2e2:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <transmitRunningChecksum2>
+    e2e6:	90 91 13 01 	lds	r25, 0x0113	; 0x800113 <transmitRunningChecksum2+0x1>
+    e2ea:	82 0f       	add	r24, r18
+    e2ec:	93 1f       	adc	r25, r19
+    e2ee:	8f 3f       	cpi	r24, 0xFF	; 255
+    e2f0:	91 05       	cpc	r25, r1
+    e2f2:	19 f0       	breq	.+6      	; 0xe2fa <transmitAddByteToChecksum+0x44>
+    e2f4:	10 f0       	brcs	.+4      	; 0xe2fa <transmitAddByteToChecksum+0x44>
+    e2f6:	8f 5f       	subi	r24, 0xFF	; 255
+    e2f8:	91 09       	sbc	r25, r1
+    e2fa:	90 93 13 01 	sts	0x0113, r25	; 0x800113 <transmitRunningChecksum2+0x1>
+    e2fe:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <transmitRunningChecksum2>
+    e302:	20 93 11 01 	sts	0x0111, r18	; 0x800111 <transmitFinalChecksum1>
+    e306:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <transmitRunningChecksum2>
+    e30a:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <transmitFinalChecksum2>
+    e30e:	08 95       	ret
+
+0000e310 <stepAsipStateMachine>:
+    e310:	e0 91 2a 02 	lds	r30, 0x022A	; 0x80022a <AsipSMState>
+    e314:	4e 2f       	mov	r20, r30
+    e316:	50 e0       	ldi	r21, 0x00	; 0
+    e318:	48 30       	cpi	r20, 0x08	; 8
+    e31a:	51 05       	cpc	r21, r1
+    e31c:	08 f0       	brcs	.+2      	; 0xe320 <stepAsipStateMachine+0x10>
+    e31e:	66 c0       	rjmp	.+204    	; 0xe3ec <stepAsipStateMachine+0xdc>
+    e320:	fa 01       	movw	r30, r20
+    e322:	e2 5c       	subi	r30, 0xC2	; 194
+    e324:	ff 48       	sbci	r31, 0x8F	; 143
+    e326:	0c 94 a4 79 	jmp	0xf348	; 0xf348 <__tablejump2__>
+    e32a:	82 3c       	cpi	r24, 0xC2	; 194
+    e32c:	09 f0       	breq	.+2      	; 0xe330 <stepAsipStateMachine+0x20>
+    e32e:	5e c0       	rjmp	.+188    	; 0xe3ec <stepAsipStateMachine+0xdc>
+    e330:	0b c0       	rjmp	.+22     	; 0xe348 <stepAsipStateMachine+0x38>
+    e332:	83 35       	cpi	r24, 0x53	; 83
+    e334:	21 f4       	brne	.+8      	; 0xe33e <stepAsipStateMachine+0x2e>
+    e336:	0e 94 1e 71 	call	0xe23c	; 0xe23c <addByteToChecksum>
+    e33a:	82 e0       	ldi	r24, 0x02	; 2
+    e33c:	54 c0       	rjmp	.+168    	; 0xe3e6 <stepAsipStateMachine+0xd6>
+    e33e:	82 3c       	cpi	r24, 0xC2	; 194
+    e340:	71 f4       	brne	.+28     	; 0xe35e <stepAsipStateMachine+0x4e>
+    e342:	0e 94 4b 71 	call	0xe296	; 0xe296 <resetChecksum>
+    e346:	82 ec       	ldi	r24, 0xC2	; 194
+    e348:	0e 94 1e 71 	call	0xe23c	; 0xe23c <addByteToChecksum>
+    e34c:	81 e0       	ldi	r24, 0x01	; 1
+    e34e:	4b c0       	rjmp	.+150    	; 0xe3e6 <stepAsipStateMachine+0xd6>
+    e350:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <Msg_CS2>
+    e354:	89 13       	cpse	r24, r25
+    e356:	03 c0       	rjmp	.+6      	; 0xe35e <stepAsipStateMachine+0x4e>
+    e358:	81 e0       	ldi	r24, 0x01	; 1
+    e35a:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <ASIPMessageReady>
+    e35e:	0e 94 4b 71 	call	0xe296	; 0xe296 <resetChecksum>
+    e362:	10 92 2a 02 	sts	0x022A, r1	; 0x80022a <AsipSMState>
+    e366:	08 95       	ret
+    e368:	80 93 29 02 	sts	0x0229, r24	; 0x800229 <Msg_Class>
+    e36c:	0e 94 1e 71 	call	0xe23c	; 0xe23c <addByteToChecksum>
+    e370:	83 e0       	ldi	r24, 0x03	; 3
+    e372:	39 c0       	rjmp	.+114    	; 0xe3e6 <stepAsipStateMachine+0xd6>
+    e374:	80 93 28 02 	sts	0x0228, r24	; 0x800228 <Msg_ID>
+    e378:	0e 94 1e 71 	call	0xe23c	; 0xe23c <addByteToChecksum>
+    e37c:	84 e0       	ldi	r24, 0x04	; 4
+    e37e:	33 c0       	rjmp	.+102    	; 0xe3e6 <stepAsipStateMachine+0xd6>
+    e380:	80 93 27 02 	sts	0x0227, r24	; 0x800227 <Msg_Length>
+    e384:	81 11       	cpse	r24, r1
+    e386:	05 c0       	rjmp	.+10     	; 0xe392 <stepAsipStateMachine+0x82>
+    e388:	86 e0       	ldi	r24, 0x06	; 6
+    e38a:	80 93 2a 02 	sts	0x022A, r24	; 0x80022a <AsipSMState>
+    e38e:	80 e0       	ldi	r24, 0x00	; 0
+    e390:	23 c0       	rjmp	.+70     	; 0xe3d8 <stepAsipStateMachine+0xc8>
+    e392:	95 e0       	ldi	r25, 0x05	; 5
+    e394:	90 93 2a 02 	sts	0x022A, r25	; 0x80022a <AsipSMState>
+    e398:	1f c0       	rjmp	.+62     	; 0xe3d8 <stepAsipStateMachine+0xc8>
+    e39a:	90 91 22 01 	lds	r25, 0x0122	; 0x800122 <PayloadCount>
+    e39e:	9f 5f       	subi	r25, 0xFF	; 255
+    e3a0:	90 93 22 01 	sts	0x0122, r25	; 0x800122 <PayloadCount>
+    e3a4:	20 91 27 02 	lds	r18, 0x0227	; 0x800227 <Msg_Length>
+    e3a8:	e0 91 23 01 	lds	r30, 0x0123	; 0x800123 <PayloadIndex>
+    e3ac:	92 13       	cpse	r25, r18
+    e3ae:	0c c0       	rjmp	.+24     	; 0xe3c8 <stepAsipStateMachine+0xb8>
+    e3b0:	f0 e0       	ldi	r31, 0x00	; 0
+    e3b2:	e9 5d       	subi	r30, 0xD9	; 217
+    e3b4:	fe 4f       	sbci	r31, 0xFE	; 254
+    e3b6:	80 83       	st	Z, r24
+    e3b8:	0e 94 1e 71 	call	0xe23c	; 0xe23c <addByteToChecksum>
+    e3bc:	10 92 22 01 	sts	0x0122, r1	; 0x800122 <PayloadCount>
+    e3c0:	10 92 23 01 	sts	0x0123, r1	; 0x800123 <PayloadIndex>
+    e3c4:	86 e0       	ldi	r24, 0x06	; 6
+    e3c6:	0f c0       	rjmp	.+30     	; 0xe3e6 <stepAsipStateMachine+0xd6>
+    e3c8:	91 e0       	ldi	r25, 0x01	; 1
+    e3ca:	9e 0f       	add	r25, r30
+    e3cc:	90 93 23 01 	sts	0x0123, r25	; 0x800123 <PayloadIndex>
+    e3d0:	f0 e0       	ldi	r31, 0x00	; 0
+    e3d2:	e9 5d       	subi	r30, 0xD9	; 217
+    e3d4:	fe 4f       	sbci	r31, 0xFE	; 254
+    e3d6:	80 83       	st	Z, r24
+    e3d8:	0c 94 1e 71 	jmp	0xe23c	; 0xe23c <addByteToChecksum>
+    e3dc:	90 91 26 01 	lds	r25, 0x0126	; 0x800126 <Msg_CS1>
+    e3e0:	89 13       	cpse	r24, r25
+    e3e2:	bd cf       	rjmp	.-134    	; 0xe35e <stepAsipStateMachine+0x4e>
+    e3e4:	87 e0       	ldi	r24, 0x07	; 7
+    e3e6:	80 93 2a 02 	sts	0x022A, r24	; 0x80022a <AsipSMState>
+    e3ea:	08 95       	ret
+    e3ec:	08 95       	ret
+
+0000e3ee <getResponseType>:
+    e3ee:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <responseType>
+    e3f2:	10 92 24 01 	sts	0x0124, r1	; 0x800124 <responseType>
+    e3f6:	08 95       	ret
+
+0000e3f8 <buildAsipTransmitMessage>:
+    e3f8:	ff 92       	push	r15
+    e3fa:	0f 93       	push	r16
+    e3fc:	1f 93       	push	r17
+    e3fe:	cf 93       	push	r28
+    e400:	df 93       	push	r29
+    e402:	d8 2f       	mov	r29, r24
+    e404:	c6 2f       	mov	r28, r22
+    e406:	14 2f       	mov	r17, r20
+    e408:	f2 2e       	mov	r15, r18
+    e40a:	03 2f       	mov	r16, r19
+    e40c:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <outgoingMsg>
+    e410:	60 93 1b 01 	sts	0x011B, r22	; 0x80011b <outgoingMsg+0x1>
+    e414:	40 93 1c 01 	sts	0x011C, r20	; 0x80011c <outgoingMsg+0x2>
+    e418:	20 93 1d 01 	sts	0x011D, r18	; 0x80011d <outgoingMsg+0x3>
+    e41c:	30 93 1e 01 	sts	0x011E, r19	; 0x80011e <outgoingMsg+0x4>
+    e420:	8f ef       	ldi	r24, 0xFF	; 255
+    e422:	90 e0       	ldi	r25, 0x00	; 0
+    e424:	90 93 15 01 	sts	0x0115, r25	; 0x800115 <transmitRunningChecksum1+0x1>
+    e428:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <transmitRunningChecksum1>
+    e42c:	90 93 13 01 	sts	0x0113, r25	; 0x800113 <transmitRunningChecksum2+0x1>
+    e430:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <transmitRunningChecksum2>
+    e434:	8f ef       	ldi	r24, 0xFF	; 255
+    e436:	80 93 11 01 	sts	0x0111, r24	; 0x800111 <transmitFinalChecksum1>
+    e43a:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <transmitFinalChecksum2>
+    e43e:	82 ec       	ldi	r24, 0xC2	; 194
+    e440:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e444:	83 e5       	ldi	r24, 0x53	; 83
+    e446:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e44a:	8d 2f       	mov	r24, r29
+    e44c:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e450:	8c 2f       	mov	r24, r28
+    e452:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e456:	81 2f       	mov	r24, r17
+    e458:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e45c:	cf 2d       	mov	r28, r15
+    e45e:	d0 2f       	mov	r29, r16
+    e460:	ce 01       	movw	r24, r28
+    e462:	81 0f       	add	r24, r17
+    e464:	91 1d       	adc	r25, r1
+    e466:	8c 01       	movw	r16, r24
+    e468:	c0 17       	cp	r28, r16
+    e46a:	d1 07       	cpc	r29, r17
+    e46c:	21 f0       	breq	.+8      	; 0xe476 <buildAsipTransmitMessage+0x7e>
+    e46e:	89 91       	ld	r24, Y+
+    e470:	0e 94 5b 71 	call	0xe2b6	; 0xe2b6 <transmitAddByteToChecksum>
+    e474:	f9 cf       	rjmp	.-14     	; 0xe468 <buildAsipTransmitMessage+0x70>
+    e476:	80 91 11 01 	lds	r24, 0x0111	; 0x800111 <transmitFinalChecksum1>
+    e47a:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <outgoingMsg+0x5>
+    e47e:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <transmitFinalChecksum2>
+    e482:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <outgoingMsg+0x6>
+    e486:	df 91       	pop	r29
+    e488:	cf 91       	pop	r28
+    e48a:	1f 91       	pop	r17
+    e48c:	0f 91       	pop	r16
+    e48e:	ff 90       	pop	r15
+    e490:	08 95       	ret
+
+0000e492 <transmitAsipMessage>:
+    e492:	8a e1       	ldi	r24, 0x1A	; 26
+    e494:	91 e0       	ldi	r25, 0x01	; 1
+    e496:	0c 94 46 79 	jmp	0xf28c	; 0xf28c <sendUdpPacket>
+
+0000e49a <processValidAsipMessages>:
+    e49a:	ef 92       	push	r14
+    e49c:	ff 92       	push	r15
+    e49e:	0f 93       	push	r16
+    e4a0:	1f 93       	push	r17
+    e4a2:	cf 93       	push	r28
+    e4a4:	df 93       	push	r29
+    e4a6:	cd b7       	in	r28, 0x3d	; 61
+    e4a8:	de b7       	in	r29, 0x3e	; 62
+    e4aa:	ca 54       	subi	r28, 0x4A	; 74
+    e4ac:	d1 09       	sbc	r29, r1
+    e4ae:	0f b6       	in	r0, 0x3f	; 63
+    e4b0:	f8 94       	cli
+    e4b2:	de bf       	out	0x3e, r29	; 62
+    e4b4:	0f be       	out	0x3f, r0	; 63
+    e4b6:	cd bf       	out	0x3d, r28	; 61
+    e4b8:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <ASIPMessageReady>
+    e4bc:	88 23       	and	r24, r24
+    e4be:	09 f4       	brne	.+2      	; 0xe4c2 <processValidAsipMessages+0x28>
+    e4c0:	2a c1       	rjmp	.+596    	; 0xe716 <processValidAsipMessages+0x27c>
+    e4c2:	80 91 29 02 	lds	r24, 0x0229	; 0x800229 <Msg_Class>
+    e4c6:	81 11       	cpse	r24, r1
+    e4c8:	24 c1       	rjmp	.+584    	; 0xe712 <processValidAsipMessages+0x278>
+    e4ca:	90 91 28 02 	lds	r25, 0x0228	; 0x800228 <Msg_ID>
+    e4ce:	90 33       	cpi	r25, 0x30	; 48
+    e4d0:	d9 f4       	brne	.+54     	; 0xe508 <processValidAsipMessages+0x6e>
+    e4d2:	19 82       	std	Y+1, r1	; 0x01
+    e4d4:	9a 83       	std	Y+2, r25	; 0x02
+    e4d6:	81 e0       	ldi	r24, 0x01	; 1
+    e4d8:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <outgoingMsg>
+    e4dc:	10 92 1b 01 	sts	0x011B, r1	; 0x80011b <outgoingMsg+0x1>
+    e4e0:	82 e0       	ldi	r24, 0x02	; 2
+    e4e2:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <outgoingMsg+0x2>
+    e4e6:	ce 01       	movw	r24, r28
+    e4e8:	01 96       	adiw	r24, 0x01	; 1
+    e4ea:	90 93 1e 01 	sts	0x011E, r25	; 0x80011e <outgoingMsg+0x4>
+    e4ee:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <outgoingMsg+0x3>
+    e4f2:	89 e4       	ldi	r24, 0x49	; 73
+    e4f4:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <outgoingMsg+0x5>
+    e4f8:	82 e8       	ldi	r24, 0x82	; 130
+    e4fa:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <outgoingMsg+0x6>
+    e4fe:	0e 94 49 72 	call	0xe492	; 0xe492 <transmitAsipMessage>
+    e502:	0e 94 40 76 	call	0xec80	; 0xec80 <setFwUpdateCompleteFlag>
+    e506:	05 c1       	rjmp	.+522    	; 0xe712 <processValidAsipMessages+0x278>
+    e508:	91 11       	cpse	r25, r1
+    e50a:	36 c0       	rjmp	.+108    	; 0xe578 <processValidAsipMessages+0xde>
+    e50c:	0e 94 7a 76 	call	0xecf4	; 0xecf4 <getSerialNumPtr>
+    e510:	fe 01       	movw	r30, r28
+    e512:	31 96       	adiw	r30, 0x01	; 1
+    e514:	9e 01       	movw	r18, r28
+    e516:	25 5b       	subi	r18, 0xB5	; 181
+    e518:	3f 4f       	sbci	r19, 0xFF	; 255
+    e51a:	df 01       	movw	r26, r30
+    e51c:	7f 01       	movw	r14, r30
+    e51e:	1d 92       	st	X+, r1
+    e520:	2a 17       	cp	r18, r26
+    e522:	3b 07       	cpc	r19, r27
+    e524:	e1 f7       	brne	.-8      	; 0xe51e <processValidAsipMessages+0x84>
+    e526:	dc 01       	movw	r26, r24
+    e528:	8e 01       	movw	r16, r28
+    e52a:	05 5f       	subi	r16, 0xF5	; 245
+    e52c:	1f 4f       	sbci	r17, 0xFF	; 255
+    e52e:	8d 91       	ld	r24, X+
+    e530:	81 93       	st	Z+, r24
+    e532:	0e 17       	cp	r16, r30
+    e534:	1f 07       	cpc	r17, r31
+    e536:	d9 f7       	brne	.-10     	; 0xe52e <processValidAsipMessages+0x94>
+    e538:	0e 94 7d 76 	call	0xecfa	; 0xecfa <getFwVersionPtr>
+    e53c:	9e 01       	movw	r18, r28
+    e53e:	25 5e       	subi	r18, 0xE5	; 229
+    e540:	3f 4f       	sbci	r19, 0xFF	; 255
+    e542:	fc 01       	movw	r30, r24
+    e544:	41 91       	ld	r20, Z+
+    e546:	cf 01       	movw	r24, r30
+    e548:	f8 01       	movw	r30, r16
+    e54a:	41 93       	st	Z+, r20
+    e54c:	8f 01       	movw	r16, r30
+    e54e:	e2 17       	cp	r30, r18
+    e550:	f3 07       	cpc	r31, r19
+    e552:	b9 f7       	brne	.-18     	; 0xe542 <processValidAsipMessages+0xa8>
+    e554:	cf 01       	movw	r24, r30
+    e556:	0e 94 76 76 	call	0xecec	; 0xecec <readFwPartNum>
+    e55a:	ce 01       	movw	r24, r28
+    e55c:	8b 96       	adiw	r24, 0x2b	; 43
+    e55e:	0e 94 5d 76 	call	0xecba	; 0xecba <readHwVersion>
+    e562:	ce 01       	movw	r24, r28
+    e564:	cb 96       	adiw	r24, 0x3b	; 59
+    e566:	0e 94 44 76 	call	0xec88	; 0xec88 <readHwPartNum>
+    e56a:	97 01       	movw	r18, r14
+    e56c:	4a e4       	ldi	r20, 0x4A	; 74
+    e56e:	61 e0       	ldi	r22, 0x01	; 1
+    e570:	80 e0       	ldi	r24, 0x00	; 0
+    e572:	0e 94 fc 71 	call	0xe3f8	; 0xe3f8 <buildAsipTransmitMessage>
+    e576:	36 c0       	rjmp	.+108    	; 0xe5e4 <processValidAsipMessages+0x14a>
+    e578:	91 33       	cpi	r25, 0x31	; 49
+    e57a:	09 f0       	breq	.+2      	; 0xe57e <processValidAsipMessages+0xe4>
+    e57c:	bc c0       	rjmp	.+376    	; 0xe6f6 <processValidAsipMessages+0x25c>
+    e57e:	20 91 0a 01 	lds	r18, 0x010A	; 0x80010a <scbBytesWrittenInPacket>
+    e582:	30 91 0b 01 	lds	r19, 0x010B	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e586:	23 2b       	or	r18, r19
+    e588:	09 f0       	breq	.+2      	; 0xe58c <processValidAsipMessages+0xf2>
+    e58a:	71 c0       	rjmp	.+226    	; 0xe66e <processValidAsipMessages+0x1d4>
+    e58c:	40 91 27 01 	lds	r20, 0x0127	; 0x800127 <Msg_Payload>
+    e590:	50 91 28 01 	lds	r21, 0x0128	; 0x800128 <Msg_Payload+0x1>
+    e594:	60 91 29 01 	lds	r22, 0x0129	; 0x800129 <Msg_Payload+0x2>
+    e598:	70 91 2a 01 	lds	r23, 0x012A	; 0x80012a <Msg_Payload+0x3>
+    e59c:	00 91 0c 01 	lds	r16, 0x010C	; 0x80010c <scdwNextWriteAddress>
+    e5a0:	10 91 0d 01 	lds	r17, 0x010D	; 0x80010d <scdwNextWriteAddress+0x1>
+    e5a4:	20 91 0e 01 	lds	r18, 0x010E	; 0x80010e <scdwNextWriteAddress+0x2>
+    e5a8:	30 91 0f 01 	lds	r19, 0x010F	; 0x80010f <scdwNextWriteAddress+0x3>
+    e5ac:	40 17       	cp	r20, r16
+    e5ae:	51 07       	cpc	r21, r17
+    e5b0:	62 07       	cpc	r22, r18
+    e5b2:	73 07       	cpc	r23, r19
+    e5b4:	d1 f0       	breq	.+52     	; 0xe5ea <processValidAsipMessages+0x150>
+    e5b6:	19 82       	std	Y+1, r1	; 0x01
+    e5b8:	9a 83       	std	Y+2, r25	; 0x02
+    e5ba:	1b 82       	std	Y+3, r1	; 0x03
+    e5bc:	81 e0       	ldi	r24, 0x01	; 1
+    e5be:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <outgoingMsg>
+    e5c2:	80 93 1b 01 	sts	0x011B, r24	; 0x80011b <outgoingMsg+0x1>
+    e5c6:	83 e0       	ldi	r24, 0x03	; 3
+    e5c8:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <outgoingMsg+0x2>
+    e5cc:	ce 01       	movw	r24, r28
+    e5ce:	01 96       	adiw	r24, 0x01	; 1
+    e5d0:	90 93 1e 01 	sts	0x011E, r25	; 0x80011e <outgoingMsg+0x4>
+    e5d4:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <outgoingMsg+0x3>
+    e5d8:	8c e4       	ldi	r24, 0x4C	; 76
+    e5da:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <outgoingMsg+0x5>
+    e5de:	86 ed       	ldi	r24, 0xD6	; 214
+    e5e0:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <outgoingMsg+0x6>
+    e5e4:	0e 94 49 72 	call	0xe492	; 0xe492 <transmitAsipMessage>
+    e5e8:	94 c0       	rjmp	.+296    	; 0xe712 <processValidAsipMessages+0x278>
+    e5ea:	20 91 27 02 	lds	r18, 0x0227	; 0x800227 <Msg_Length>
+    e5ee:	41 15       	cp	r20, r1
+    e5f0:	51 05       	cpc	r21, r1
+    e5f2:	61 05       	cpc	r22, r1
+    e5f4:	71 05       	cpc	r23, r1
+    e5f6:	b1 f0       	breq	.+44     	; 0xe624 <processValidAsipMessages+0x18a>
+    e5f8:	30 e0       	ldi	r19, 0x00	; 0
+    e5fa:	c9 01       	movw	r24, r18
+    e5fc:	04 97       	sbiw	r24, 0x04	; 4
+    e5fe:	09 2e       	mov	r0, r25
+    e600:	00 0c       	add	r0, r0
+    e602:	aa 0b       	sbc	r26, r26
+    e604:	bb 0b       	sbc	r27, r27
+    e606:	84 0f       	add	r24, r20
+    e608:	95 1f       	adc	r25, r21
+    e60a:	a6 1f       	adc	r26, r22
+    e60c:	b7 1f       	adc	r27, r23
+    e60e:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <scdwNextWriteAddress>
+    e612:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <scdwNextWriteAddress+0x1>
+    e616:	a0 93 0e 01 	sts	0x010E, r26	; 0x80010e <scdwNextWriteAddress+0x2>
+    e61a:	b0 93 0f 01 	sts	0x010F, r27	; 0x80010f <scdwNextWriteAddress+0x3>
+    e61e:	84 e0       	ldi	r24, 0x04	; 4
+    e620:	90 e0       	ldi	r25, 0x00	; 0
+    e622:	21 c0       	rjmp	.+66     	; 0xe666 <processValidAsipMessages+0x1cc>
+    e624:	80 91 2f 01 	lds	r24, 0x012F	; 0x80012f <Msg_Payload+0x8>
+    e628:	90 91 30 01 	lds	r25, 0x0130	; 0x800130 <Msg_Payload+0x9>
+    e62c:	a0 91 31 01 	lds	r26, 0x0131	; 0x800131 <Msg_Payload+0xa>
+    e630:	b0 91 32 01 	lds	r27, 0x0132	; 0x800132 <Msg_Payload+0xb>
+    e634:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <__data_end>
+    e638:	90 93 07 01 	sts	0x0107, r25	; 0x800107 <__data_end+0x1>
+    e63c:	a0 93 08 01 	sts	0x0108, r26	; 0x800108 <__data_end+0x2>
+    e640:	b0 93 09 01 	sts	0x0109, r27	; 0x800109 <__data_end+0x3>
+    e644:	82 2f       	mov	r24, r18
+    e646:	90 e0       	ldi	r25, 0x00	; 0
+    e648:	04 97       	sbiw	r24, 0x04	; 4
+    e64a:	09 2e       	mov	r0, r25
+    e64c:	00 0c       	add	r0, r0
+    e64e:	aa 0b       	sbc	r26, r26
+    e650:	bb 0b       	sbc	r27, r27
+    e652:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <scdwNextWriteAddress>
+    e656:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <scdwNextWriteAddress+0x1>
+    e65a:	a0 93 0e 01 	sts	0x010E, r26	; 0x80010e <scdwNextWriteAddress+0x2>
+    e65e:	b0 93 0f 01 	sts	0x010F, r27	; 0x80010f <scdwNextWriteAddress+0x3>
+    e662:	8c e2       	ldi	r24, 0x2C	; 44
+    e664:	90 e0       	ldi	r25, 0x00	; 0
+    e666:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e66a:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <scbBytesWrittenInPacket>
+    e66e:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <scbBytesWrittenInPacket>
+    e672:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e676:	60 91 27 02 	lds	r22, 0x0227	; 0x800227 <Msg_Length>
+    e67a:	70 e0       	ldi	r23, 0x00	; 0
+    e67c:	68 1b       	sub	r22, r24
+    e67e:	79 0b       	sbc	r23, r25
+    e680:	89 5d       	subi	r24, 0xD9	; 217
+    e682:	9e 4f       	sbci	r25, 0xFE	; 254
+    e684:	0e 94 0a 76 	call	0xec14	; 0xec14 <pushPageBuffer>
+    e688:	20 91 0a 01 	lds	r18, 0x010A	; 0x80010a <scbBytesWrittenInPacket>
+    e68c:	30 91 0b 01 	lds	r19, 0x010B	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e690:	82 0f       	add	r24, r18
+    e692:	93 1f       	adc	r25, r19
+    e694:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e698:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <scbBytesWrittenInPacket>
+    e69c:	20 91 27 02 	lds	r18, 0x0227	; 0x800227 <Msg_Length>
+    e6a0:	30 e0       	ldi	r19, 0x00	; 0
+    e6a2:	82 17       	cp	r24, r18
+    e6a4:	93 07       	cpc	r25, r19
+    e6a6:	28 f4       	brcc	.+10     	; 0xe6b2 <processValidAsipMessages+0x218>
+    e6a8:	95 b1       	in	r25, 0x05	; 5
+    e6aa:	82 e0       	ldi	r24, 0x02	; 2
+    e6ac:	89 27       	eor	r24, r25
+    e6ae:	85 b9       	out	0x05, r24	; 5
+    e6b0:	32 c0       	rjmp	.+100    	; 0xe716 <processValidAsipMessages+0x27c>
+    e6b2:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <scbBytesWrittenInPacket+0x1>
+    e6b6:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <scbBytesWrittenInPacket>
+    e6ba:	19 82       	std	Y+1, r1	; 0x01
+    e6bc:	81 e3       	ldi	r24, 0x31	; 49
+    e6be:	8a 83       	std	Y+2, r24	; 0x02
+    e6c0:	81 e0       	ldi	r24, 0x01	; 1
+    e6c2:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <outgoingMsg>
+    e6c6:	10 92 1b 01 	sts	0x011B, r1	; 0x80011b <outgoingMsg+0x1>
+    e6ca:	82 e0       	ldi	r24, 0x02	; 2
+    e6cc:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <outgoingMsg+0x2>
+    e6d0:	ce 01       	movw	r24, r28
+    e6d2:	01 96       	adiw	r24, 0x01	; 1
+    e6d4:	90 93 1e 01 	sts	0x011E, r25	; 0x80011e <outgoingMsg+0x4>
+    e6d8:	80 93 1d 01 	sts	0x011D, r24	; 0x80011d <outgoingMsg+0x3>
+    e6dc:	8a e4       	ldi	r24, 0x4A	; 74
+    e6de:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <outgoingMsg+0x5>
+    e6e2:	83 e8       	ldi	r24, 0x83	; 131
+    e6e4:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <outgoingMsg+0x6>
+    e6e8:	0e 94 49 72 	call	0xe492	; 0xe492 <transmitAsipMessage>
+    e6ec:	95 b1       	in	r25, 0x05	; 5
+    e6ee:	80 e1       	ldi	r24, 0x10	; 16
+    e6f0:	89 27       	eor	r24, r25
+    e6f2:	85 b9       	out	0x05, r24	; 5
+    e6f4:	0e c0       	rjmp	.+28     	; 0xe712 <processValidAsipMessages+0x278>
+    e6f6:	92 33       	cpi	r25, 0x32	; 50
+    e6f8:	61 f4       	brne	.+24     	; 0xe712 <processValidAsipMessages+0x278>
+    e6fa:	0e 94 7a 76 	call	0xecf4	; 0xecf4 <getSerialNumPtr>
+    e6fe:	bc 01       	movw	r22, r24
+    e700:	6c 5f       	subi	r22, 0xFC	; 252
+    e702:	7f 4f       	sbci	r23, 0xFF	; 255
+    e704:	8b e2       	ldi	r24, 0x2B	; 43
+    e706:	91 e0       	ldi	r25, 0x01	; 1
+    e708:	0e 94 80 76 	call	0xed00	; 0xed00 <compareSerialNums>
+    e70c:	81 11       	cpse	r24, r1
+    e70e:	0e 94 f9 73 	call	0xe7f2	; 0xe7f2 <sendReadyForFwUpdate>
+    e712:	10 92 21 01 	sts	0x0121, r1	; 0x800121 <ASIPMessageReady>
+    e716:	c6 5b       	subi	r28, 0xB6	; 182
+    e718:	df 4f       	sbci	r29, 0xFF	; 255
+    e71a:	0f b6       	in	r0, 0x3f	; 63
+    e71c:	f8 94       	cli
+    e71e:	de bf       	out	0x3e, r29	; 62
+    e720:	0f be       	out	0x3f, r0	; 63
+    e722:	cd bf       	out	0x3d, r28	; 61
+    e724:	df 91       	pop	r29
+    e726:	cf 91       	pop	r28
+    e728:	1f 91       	pop	r17
+    e72a:	0f 91       	pop	r16
+    e72c:	ff 90       	pop	r15
+    e72e:	ef 90       	pop	r14
+    e730:	08 95       	ret
+
+0000e732 <getReceivedChecksum>:
+    //transmitTcpAsipMessage();
+}
+
+DWORD getReceivedChecksum(void)
+{
+    return receivedChecksum;
+    e732:	60 91 06 01 	lds	r22, 0x0106	; 0x800106 <__data_end>
+    e736:	70 91 07 01 	lds	r23, 0x0107	; 0x800107 <__data_end+0x1>
+    e73a:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end+0x2>
+    e73e:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <__data_end+0x3>
+}
+    e742:	08 95       	ret
+
+0000e744 <JumpToApp>:
+}
+
+
+static void JumpToApp(void)
+{
+   _CLI(); //disable all interrupts
+    e744:	f8 94       	cli
+   //move interrupts back to application section
+   //at this point IVSEL bit is set and we need to reset it
+   MCUCR |= 0x01;//set the IVCE bit
+    e746:	85 b7       	in	r24, 0x35	; 53
+    e748:	81 60       	ori	r24, 0x01	; 1
+    e74a:	85 bf       	out	0x35, r24	; 53
+   MCUCR = 0x00; //reset the IVSEL and IVCE bit
+    e74c:	15 be       	out	0x35, r1	; 53
+   asm("jmp (0x0000*2)");  	//jump to application
+    e74e:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+    e752:	08 95       	ret
+
+0000e754 <getPageBufferUsed>:
+
+static WORD getPageBufferUsed(void)
+{
+	WORD nUsed = 0; // 0 if head = tail
+
+	if(scwProgPgTail > scwProgPgHead)
+    e754:	80 91 57 02 	lds	r24, 0x0257	; 0x800257 <scwProgPgTail>
+    e758:	90 91 58 02 	lds	r25, 0x0258	; 0x800258 <scwProgPgTail+0x1>
+    e75c:	20 91 59 02 	lds	r18, 0x0259	; 0x800259 <scwProgPgHead>
+    e760:	30 91 5a 02 	lds	r19, 0x025A	; 0x80025a <scwProgPgHead+0x1>
+    e764:	28 17       	cp	r18, r24
+    e766:	39 07       	cpc	r19, r25
+    e768:	28 f0       	brcs	.+10     	; 0xe774 <getPageBufferUsed+0x20>
+	{
+		nUsed = scwProgPgTail - scwProgPgHead;// + 1;
+	}
+	else if(scwProgPgTail < scwProgPgHead)
+    e76a:	82 17       	cp	r24, r18
+    e76c:	93 07       	cpc	r25, r19
+    e76e:	28 f4       	brcc	.+10     	; 0xe77a <getPageBufferUsed+0x26>
+	{
+		nUsed = PAGE_BUFFER_SIZE - scwProgPgHead + scwProgPgTail;
+    e770:	8f 5f       	subi	r24, 0xFF	; 255
+    e772:	9e 4f       	sbci	r25, 0xFE	; 254
+    e774:	82 1b       	sub	r24, r18
+    e776:	93 0b       	sbc	r25, r19
+    e778:	08 95       	ret
+}
+
+
+static WORD getPageBufferUsed(void)
+{
+	WORD nUsed = 0; // 0 if head = tail
+    e77a:	80 e0       	ldi	r24, 0x00	; 0
+    e77c:	90 e0       	ldi	r25, 0x00	; 0
+	{
+		nUsed = PAGE_BUFFER_SIZE - scwProgPgHead + scwProgPgTail;
+	}
+
+	return nUsed;
+}
+    e77e:	08 95       	ret
+
+0000e780 <popPageBuffer>:
+
+static BYTE popPageBuffer(void)
+{
+	BYTE ret = 0x00;
+
+	if(scwProgPgTail != scwProgPgHead)
+    e780:	80 91 59 02 	lds	r24, 0x0259	; 0x800259 <scwProgPgHead>
+    e784:	90 91 5a 02 	lds	r25, 0x025A	; 0x80025a <scwProgPgHead+0x1>
+    e788:	20 91 57 02 	lds	r18, 0x0257	; 0x800257 <scwProgPgTail>
+    e78c:	30 91 58 02 	lds	r19, 0x0258	; 0x800258 <scwProgPgTail+0x1>
+    e790:	28 17       	cp	r18, r24
+    e792:	39 07       	cpc	r19, r25
+    e794:	99 f0       	breq	.+38     	; 0xe7bc <popPageBuffer+0x3c>
+	{
+		ret = scbyProgPgBuff[scwProgPgHead++];
+    e796:	9c 01       	movw	r18, r24
+    e798:	2f 5f       	subi	r18, 0xFF	; 255
+    e79a:	3f 4f       	sbci	r19, 0xFF	; 255
+    e79c:	30 93 5a 02 	sts	0x025A, r19	; 0x80025a <scwProgPgHead+0x1>
+    e7a0:	20 93 59 02 	sts	0x0259, r18	; 0x800259 <scwProgPgHead>
+    e7a4:	fc 01       	movw	r30, r24
+    e7a6:	e5 5a       	subi	r30, 0xA5	; 165
+    e7a8:	fd 4f       	sbci	r31, 0xFD	; 253
+    e7aa:	80 81       	ld	r24, Z
+		if(scwProgPgHead >= PAGE_BUFFER_SIZE)
+    e7ac:	21 30       	cpi	r18, 0x01	; 1
+    e7ae:	31 40       	sbci	r19, 0x01	; 1
+    e7b0:	30 f0       	brcs	.+12     	; 0xe7be <popPageBuffer+0x3e>
+		{
+			scwProgPgHead = 0;
+    e7b2:	10 92 5a 02 	sts	0x025A, r1	; 0x80025a <scwProgPgHead+0x1>
+    e7b6:	10 92 59 02 	sts	0x0259, r1	; 0x800259 <scwProgPgHead>
+    e7ba:	08 95       	ret
+	return nUsed;
+}
+
+static BYTE popPageBuffer(void)
+{
+	BYTE ret = 0x00;
+    e7bc:	80 e0       	ldi	r24, 0x00	; 0
+			scwProgPgHead = 0;
+		}
+	}
+
+	return ret;
+}
+    e7be:	08 95       	ret
+
+0000e7c0 <__vector_12>:
+DATE:       WHO:  CHANGE DESCRIPTION:
+======================================================================
+05/08/2004  BWT   Created.
+*******************************************************************************/
+ISR(TIMER1_COMPA_vect)
+{
+    e7c0:	1f 92       	push	r1
+    e7c2:	0f 92       	push	r0
+    e7c4:	0f b6       	in	r0, 0x3f	; 63
+    e7c6:	0f 92       	push	r0
+    e7c8:	11 24       	eor	r1, r1
+    e7ca:	8f 93       	push	r24
+    e7cc:	9f 93       	push	r25
+    scbyTicksPending++;
+    e7ce:	80 91 5c 03 	lds	r24, 0x035C	; 0x80035c <scbyTicksPending>
+    e7d2:	8f 5f       	subi	r24, 0xFF	; 255
+    e7d4:	80 93 5c 03 	sts	0x035C, r24	; 0x80035c <scbyTicksPending>
+    OCR1A  = OCR1A_COUNT_FOR_TICK; // reset output compare value;
+    e7d8:	89 e0       	ldi	r24, 0x09	; 9
+    e7da:	9d e3       	ldi	r25, 0x3D	; 61
+    e7dc:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f0089>
+    e7e0:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f0088>
+
+}
+    e7e4:	9f 91       	pop	r25
+    e7e6:	8f 91       	pop	r24
+    e7e8:	0f 90       	pop	r0
+    e7ea:	0f be       	out	0x3f, r0	; 63
+    e7ec:	0f 90       	pop	r0
+    e7ee:	1f 90       	pop	r1
+    e7f0:	18 95       	reti
+
+0000e7f2 <sendReadyForFwUpdate>:
+    buildAsipTransmitMessage(0x01, 0x00, 2, &ackData[0]);
+    transmitAsipMessage();
+}
+
+void sendReadyForFwUpdate(void)
+{
+    e7f2:	cf 93       	push	r28
+    e7f4:	df 93       	push	r29
+    e7f6:	1f 92       	push	r1
+    e7f8:	cd b7       	in	r28, 0x3d	; 61
+    e7fa:	de b7       	in	r29, 0x3e	; 62
+    BYTE mode;
+
+    mode = 3; // FW update mode
+    e7fc:	83 e0       	ldi	r24, 0x03	; 3
+    e7fe:	89 83       	std	Y+1, r24	; 0x01
+    buildAsipTransmitMessage(0x00, 0x05, 1, &mode);
+    e800:	9e 01       	movw	r18, r28
+    e802:	2f 5f       	subi	r18, 0xFF	; 255
+    e804:	3f 4f       	sbci	r19, 0xFF	; 255
+    e806:	41 e0       	ldi	r20, 0x01	; 1
+    e808:	65 e0       	ldi	r22, 0x05	; 5
+    e80a:	80 e0       	ldi	r24, 0x00	; 0
+    e80c:	0e 94 fc 71 	call	0xe3f8	; 0xe3f8 <buildAsipTransmitMessage>
+    transmitAsipMessage();
+    e810:	0e 94 49 72 	call	0xe492	; 0xe492 <transmitAsipMessage>
+}
+    e814:	0f 90       	pop	r0
+    e816:	df 91       	pop	r29
+    e818:	cf 91       	pop	r28
+    e81a:	08 95       	ret
+
+0000e81c <setWifiDoneFlag>:
+
+}
+
+void setWifiDoneFlag(void)
+{
+    wifiConfigDone = 1;
+    e81c:	81 e0       	ldi	r24, 0x01	; 1
+    e81e:	80 93 37 02 	sts	0x0237, r24	; 0x800237 <wifiConfigDone>
+    e822:	08 95       	ret
+
+0000e824 <main>:
+   WORD wJ;
+   //BYTE* pbyVal;
+
+   BYTE pendingUpdateFlag = 0xFF;
+   BYTE validAppFlag = 0xFF;
+   appErrorMsgSent = 0;
+    e824:	10 92 3a 02 	sts	0x023A, r1	; 0x80023a <appErrorMsgSent>
+   startBootMsgSent = 0;
+    e828:	10 92 39 02 	sts	0x0239, r1	; 0x800239 <startBootMsgSent>
+   readyToUpdateFlag = 0;
+   fwUpdateCompleteFlag = 0;
+    e82c:	10 92 38 02 	sts	0x0238, r1	; 0x800238 <fwUpdateCompleteFlag>
+   WORD toggleCount = 0;
+   wifiConfigDone = 0;
+    e830:	10 92 37 02 	sts	0x0237, r1	; 0x800237 <wifiConfigDone>
+   flashCount = 512;
+    e834:	80 e0       	ldi	r24, 0x00	; 0
+    e836:	92 e0       	ldi	r25, 0x02	; 2
+    e838:	90 93 2c 02 	sts	0x022C, r25	; 0x80022c <flashCount+0x1>
+    e83c:	80 93 2b 02 	sts	0x022B, r24	; 0x80022b <flashCount>
+   //BYTE wifiInitDone = 0;
+   //WORD wifiInitTimer = 0;
+
+	BYTE pageTemp[2];
+
+   _CLI(); //disable all interrupts
+    e840:	f8 94       	cli
+   //move interrupts to bootloader section from application section
+   MCUCR = 0x01; //set the IVCE bit in MCUCR
+    e842:	81 e0       	ldi	r24, 0x01	; 1
+    e844:	85 bf       	out	0x35, r24	; 53
+   MCUCR = 0x02; //set the IVSEL bit and reset the IVCE bit within 4clk cycles from last line
+    e846:	82 e0       	ldi	r24, 0x02	; 2
+    e848:	85 bf       	out	0x35, r24	; 53
+				: "r0"
+		);
+	}
+	else
+	{
+		__asm__ __volatile__ (
+    e84a:	9f e0       	ldi	r25, 0x0F	; 15
+    e84c:	88 e1       	ldi	r24, 0x18	; 24
+    e84e:	0f b6       	in	r0, 0x3f	; 63
+    e850:	f8 94       	cli
+    e852:	a8 95       	wdr
+    e854:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f0060>
+    e858:	0f be       	out	0x3f, r0	; 63
+    e85a:	90 93 60 00 	sts	0x0060, r25	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f0060>
+
+   //initialization of other static vars
+   programPacketReceived = 0;
+   programPacketCount = 0;
+   appProgrammingStarted = 0;
+   scdwAddress = 0;
+    e85e:	10 92 53 02 	sts	0x0253, r1	; 0x800253 <scdwAddress>
+    e862:	10 92 54 02 	sts	0x0254, r1	; 0x800254 <scdwAddress+0x1>
+    e866:	10 92 55 02 	sts	0x0255, r1	; 0x800255 <scdwAddress+0x2>
+    e86a:	10 92 56 02 	sts	0x0256, r1	; 0x800256 <scdwAddress+0x3>
+   //checksumRequestFlag = 0;
+   //scbySleep = 0;
+   scflEeUpdateReq = 0;
+   scbyChksm1 = 0;
+   scbyChksm2 = 0;
+    e86e:	10 92 4f 02 	sts	0x024F, r1	; 0x80024f <scbyChksm2>
+    e872:	10 92 50 02 	sts	0x0250, r1	; 0x800250 <scbyChksm2+0x1>
+    e876:	10 92 51 02 	sts	0x0251, r1	; 0x800251 <scbyChksm2+0x2>
+    e87a:	10 92 52 02 	sts	0x0252, r1	; 0x800252 <scbyChksm2+0x3>
+   scbyChksm3 = 0;
+    e87e:	10 92 4b 02 	sts	0x024B, r1	; 0x80024b <scbyChksm3>
+    e882:	10 92 4c 02 	sts	0x024C, r1	; 0x80024c <scbyChksm3+0x1>
+    e886:	10 92 4d 02 	sts	0x024D, r1	; 0x80024d <scbyChksm3+0x2>
+    e88a:	10 92 4e 02 	sts	0x024E, r1	; 0x80024e <scbyChksm3+0x3>
+======================================================================
+07/07/2005  VS       Initial Creation
+*******************************************************************************/
+static void hwInit(void)
+{
+    DDRB = 0;
+    e88e:	14 b8       	out	0x04, r1	; 4
+    DDRC = 0;
+    e890:	17 b8       	out	0x07, r1	; 7
+    DDRD = 0;
+    e892:	1a b8       	out	0x0a, r1	; 10
+    CONFIG_PORTB_DDR;
+    e894:	84 b1       	in	r24, 0x04	; 4
+    e896:	8b 69       	ori	r24, 0x9B	; 155
+    e898:	84 b9       	out	0x04, r24	; 4
+    CONFIG_PORTC_DDR;
+    e89a:	87 b1       	in	r24, 0x07	; 7
+    e89c:	8f 6c       	ori	r24, 0xCF	; 207
+    e89e:	87 b9       	out	0x07, r24	; 7
+    CONFIG_PORTD_DDR;
+    e8a0:	8a b1       	in	r24, 0x0a	; 10
+    e8a2:	8b 69       	ori	r24, 0x9B	; 155
+    e8a4:	8a b9       	out	0x0a, r24	; 10
+    CONFIG_PORTE_DDR;
+    e8a6:	1d b8       	out	0x0d, r1	; 13
+
+    PORTB = 0;
+    e8a8:	15 b8       	out	0x05, r1	; 5
+    PORTD = 0;
+    e8aa:	1b b8       	out	0x0b, r1	; 11
+
+    SET_WIFI_RESET_HIGH;
+    e8ac:	59 98       	cbi	0x0b, 1	; 11
+} /* hwInit */
+
+
+static void driverInit(void)
+{
+	initUART();
+    e8ae:	0e 94 91 76 	call	0xed22	; 0xed22 <initUART>
+10/10/2006   Vijay Soni       Initial Creation
+10/16/2006   Robert Weinmann  Added Interrupt Enable for Output Compare match
+*******************************************************************************/
+static void SchedulerInit(void)
+{
+    TCCR1A = 0; // Use OCR1A for TOP count
+    e8b2:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <__TEXT_REGION_LENGTH__+0x7f0080>
+    TCCR1B = _BV(WGM12) | _BV(CS10); // CTC mode, no clock pre-scaler
+    e8b6:	89 e0       	ldi	r24, 0x09	; 9
+    e8b8:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7f0081>
+    TIMSK1 |= _BV(OCIE1A); // Enable Output Compare A Match interrupt
+    e8bc:	80 91 6f 00 	lds	r24, 0x006F	; 0x80006f <__TEXT_REGION_LENGTH__+0x7f006f>
+    e8c0:	82 60       	ori	r24, 0x02	; 2
+    e8c2:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7f006f>
+    OCR1A = OCR1A_COUNT_FOR_TICK;
+    e8c6:	89 e0       	ldi	r24, 0x09	; 9
+    e8c8:	9d e3       	ldi	r25, 0x3D	; 61
+    e8ca:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f0089>
+    e8ce:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f0088>
+
+    scbyCurrentTick = LAST_TICK; //initial value, next value will be 0
+    e8d2:	8f ef       	ldi	r24, 0xFF	; 255
+    e8d4:	80 93 5d 03 	sts	0x035D, r24	; 0x80035d <scbyCurrentTick>
+    scbyTicksPending = 0;
+    e8d8:	10 92 5c 03 	sts	0x035C, r1	; 0x80035c <scbyTicksPending>
+    e8dc:	0d e2       	ldi	r16, 0x2D	; 45
+    e8de:	12 e0       	ldi	r17, 0x02	; 2
+    e8e0:	c6 ea       	ldi	r28, 0xA6	; 166
+    e8e2:	d7 e0       	ldi	r29, 0x07	; 7
+{
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_SERIAL_NUM; i++)
+    {
+        eeprom_busy_wait();
+    e8e4:	f9 99       	sbic	0x1f, 1	; 31
+    e8e6:	fe cf       	rjmp	.-4      	; 0xe8e4 <main+0xc0>
+        serialNum[i] = eeprom_read_byte((BYTE *)(EE_SERIAL_NUM_LOC + i));
+    e8e8:	ce 01       	movw	r24, r28
+    e8ea:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    e8ee:	f8 01       	movw	r30, r16
+    e8f0:	81 93       	st	Z+, r24
+    e8f2:	8f 01       	movw	r16, r30
+    e8f4:	21 96       	adiw	r28, 0x01	; 1
+// Read and store the device Serial Number from EEPROM
+static void readSerialNum(void)
+{
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_SERIAL_NUM; i++)
+    e8f6:	c0 3b       	cpi	r28, 0xB0	; 176
+    e8f8:	f7 e0       	ldi	r31, 0x07	; 7
+    e8fa:	df 07       	cpc	r29, r31
+    e8fc:	99 f7       	brne	.-26     	; 0xe8e4 <main+0xc0>
+}
+
+// Read and store the device firmware version from Flash
+static void readFwVersion(void)
+{
+    strcpy_P(fwVersion, FwVersion);
+    e8fe:	6a eb       	ldi	r22, 0xBA	; 186
+    e900:	70 ee       	ldi	r23, 0xE0	; 224
+    e902:	8b e3       	ldi	r24, 0x3B	; 59
+    e904:	92 e0       	ldi	r25, 0x02	; 2
+    e906:	0e 94 aa 79 	call	0xf354	; 0xf354 <strcpy_P>
+
+   SchedulerInit();
+   readSerialNum();
+   readFwVersion();
+
+   TURN_LED_ON;
+    e90a:	2c 9a       	sbi	0x05, 4	; 5
+
+   	eeprom_busy_wait();
+    e90c:	f9 99       	sbic	0x1f, 1	; 31
+    e90e:	fe cf       	rjmp	.-4      	; 0xe90c <main+0xe8>
+   	validAppFlag = eeprom_read_byte((BYTE *)EE_PROGM_DATA_VALID_LOC);
+    e910:	8d e6       	ldi	r24, 0x6D	; 109
+    e912:	97 e0       	ldi	r25, 0x07	; 7
+    e914:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    e918:	78 2e       	mov	r7, r24
+   	eeprom_busy_wait();
+    e91a:	f9 99       	sbic	0x1f, 1	; 31
+    e91c:	fe cf       	rjmp	.-4      	; 0xe91a <main+0xf6>
+   	pendingUpdateFlag = eeprom_read_byte((BYTE *)EE_FW_UPDATE_PENDING_LOC);
+    e91e:	8a e6       	ldi	r24, 0x6A	; 106
+    e920:	97 e0       	ldi	r25, 0x07	; 7
+    e922:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    e926:	68 2e       	mov	r6, r24
+
+	// Clear out update pending flag right away
+	if(pendingUpdateFlag != 0)
+    e928:	88 23       	and	r24, r24
+    e92a:	91 f0       	breq	.+36     	; 0xe950 <main+0x12c>
+	{
+		eeprom_busy_wait();
+    e92c:	f9 99       	sbic	0x1f, 1	; 31
+    e92e:	fe cf       	rjmp	.-4      	; 0xe92c <main+0x108>
+		eeprom_write_byte((BYTE *)EE_FW_UPDATE_PENDING_LOC, 0x00);
+    e930:	60 e0       	ldi	r22, 0x00	; 0
+    e932:	8a e6       	ldi	r24, 0x6A	; 106
+    e934:	97 e0       	ldi	r25, 0x07	; 7
+    e936:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+        eeprom_busy_wait();
+    e93a:	f9 99       	sbic	0x1f, 1	; 31
+    e93c:	fe cf       	rjmp	.-4      	; 0xe93a <main+0x116>
+        eeprom_write_byte((BYTE*)EE_PROGM_DATA_VALID_LOC, 0xFF);  // Clear the valid app flag
+    e93e:	6f ef       	ldi	r22, 0xFF	; 255
+    e940:	8d e6       	ldi	r24, 0x6D	; 109
+    e942:	97 e0       	ldi	r25, 0x07	; 7
+    e944:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+        eeprom_busy_wait();
+    e948:	f9 99       	sbic	0x1f, 1	; 31
+    e94a:	fe cf       	rjmp	.-4      	; 0xe948 <main+0x124>
+        validAppFlag = 0xFF;
+    e94c:	77 24       	eor	r7, r7
+    e94e:	7a 94       	dec	r7
+	}
+
+    // Clear the flag indicating that the Wifi module is properly configured
+    eeprom_busy_wait();
+    e950:	f9 99       	sbic	0x1f, 1	; 31
+    e952:	fe cf       	rjmp	.-4      	; 0xe950 <main+0x12c>
+    eeprom_write_byte((BYTE *)EE_WIFI_CONFIG_STATE_LOC, 0xFF);
+    e954:	6f ef       	ldi	r22, 0xFF	; 255
+    e956:	81 e3       	ldi	r24, 0x31	; 49
+    e958:	97 e0       	ldi	r25, 0x07	; 7
+    e95a:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+   /* Enable interrupts */
+   _SEI();
+    e95e:	78 94       	sei
+   BYTE validAppFlag = 0xFF;
+   appErrorMsgSent = 0;
+   startBootMsgSent = 0;
+   readyToUpdateFlag = 0;
+   fwUpdateCompleteFlag = 0;
+   WORD toggleCount = 0;
+    e960:	c0 e0       	ldi	r28, 0x00	; 0
+    e962:	d0 e0       	ldi	r29, 0x00	; 0
+	else if(validAppFlag != 0)//last programming was not successful if it ever happened
+	{
+		//scbySleep = 1;
+		if(!appErrorMsgSent)
+        {
+            appErrorMsgSent = 1;
+    e964:	55 24       	eor	r5, r5
+    e966:	53 94       	inc	r5
+            sendInvalidProgMsg();
+            // TODO: Fast flash LEDs here...
+            flashCount = 128;
+    e968:	80 e8       	ldi	r24, 0x80	; 128
+    e96a:	c8 2e       	mov	r12, r24
+    e96c:	d1 2c       	mov	r13, r1
+
+			_CLI();//disable interrupts
+			boot_page_erase(scdwAddress);
+			while(boot_rww_busy())
+			{
+				boot_rww_enable();
+    e96e:	91 e1       	ldi	r25, 0x11	; 17
+    e970:	49 2e       	mov	r4, r25
+                {
+                    TOGGLE_ROW3_LED;
+                }
+                else
+                {
+                    TOGGLE_ROW3_LED;
+    e972:	20 e4       	ldi	r18, 0x40	; 64
+    e974:	32 2e       	mov	r3, r18
+
+   /* Start the task manager loop. */
+   //while(1);
+   for (;;)
+   {
+	 wdt_reset();
+    e976:	a8 95       	wdr
+
+    //
+
+        //if timed out waiting for start of programming/jump cmd
+	//jump to application if last programming attempt was successful
+	if((validAppFlag == 0) && (pendingUpdateFlag != 0x01) && (wifiConfigDone))
+    e978:	71 10       	cpse	r7, r1
+    e97a:	1c c0       	rjmp	.+56     	; 0xe9b4 <main+0x190>
+    e97c:	81 e0       	ldi	r24, 0x01	; 1
+    e97e:	68 12       	cpse	r6, r24
+    e980:	09 c0       	rjmp	.+18     	; 0xe994 <main+0x170>
+        }
+
+	}
+    if(pendingUpdateFlag == 0x01)
+    {
+		if(!startBootMsgSent)
+    e982:	80 91 39 02 	lds	r24, 0x0239	; 0x800239 <startBootMsgSent>
+    e986:	81 11       	cpse	r24, r1
+    e988:	22 c0       	rjmp	.+68     	; 0xe9ce <main+0x1aa>
+		{
+    		startBootMsgSent = 1;
+    e98a:	50 92 39 02 	sts	0x0239, r5	; 0x800239 <startBootMsgSent>
+            readyToUpdateFlag = 1;
+    		sendReadyForFwUpdate();
+    e98e:	0e 94 f9 73 	call	0xe7f2	; 0xe7f2 <sendReadyForFwUpdate>
+    e992:	1d c0       	rjmp	.+58     	; 0xe9ce <main+0x1aa>
+
+    //
+
+        //if timed out waiting for start of programming/jump cmd
+	//jump to application if last programming attempt was successful
+	if((validAppFlag == 0) && (pendingUpdateFlag != 0x01) && (wifiConfigDone))
+    e994:	80 91 37 02 	lds	r24, 0x0237	; 0x800237 <wifiConfigDone>
+    e998:	88 23       	and	r24, r24
+    e99a:	c9 f0       	breq	.+50     	; 0xe9ce <main+0x1aa>
+	{
+		eeprom_busy_wait();
+    e99c:	f9 99       	sbic	0x1f, 1	; 31
+    e99e:	fe cf       	rjmp	.-4      	; 0xe99c <main+0x178>
+		// EEPROM update not required as we did not receive any command
+		eeprom_write_byte((BYTE*)EE_UPDATE_REQ_LOC, 0xFF);
+    e9a0:	6f ef       	ldi	r22, 0xFF	; 255
+    e9a2:	8c e6       	ldi	r24, 0x6C	; 108
+    e9a4:	97 e0       	ldi	r25, 0x07	; 7
+    e9a6:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+		eeprom_busy_wait();
+    e9aa:	f9 99       	sbic	0x1f, 1	; 31
+    e9ac:	fe cf       	rjmp	.-4      	; 0xe9aa <main+0x186>
+		JumpToApp();
+    e9ae:	0e 94 a2 73 	call	0xe744	; 0xe744 <JumpToApp>
+    e9b2:	0d c0       	rjmp	.+26     	; 0xe9ce <main+0x1aa>
+	}
+	else if(validAppFlag != 0)//last programming was not successful if it ever happened
+	{
+		//scbySleep = 1;
+		if(!appErrorMsgSent)
+    e9b4:	80 91 3a 02 	lds	r24, 0x023A	; 0x80023a <appErrorMsgSent>
+    e9b8:	81 11       	cpse	r24, r1
+    e9ba:	06 c0       	rjmp	.+12     	; 0xe9c8 <main+0x1a4>
+        {
+            appErrorMsgSent = 1;
+    e9bc:	50 92 3a 02 	sts	0x023A, r5	; 0x80023a <appErrorMsgSent>
+            sendInvalidProgMsg();
+            // TODO: Fast flash LEDs here...
+            flashCount = 128;
+    e9c0:	d0 92 2c 02 	sts	0x022C, r13	; 0x80022c <flashCount+0x1>
+    e9c4:	c0 92 2b 02 	sts	0x022B, r12	; 0x80022b <flashCount>
+        }
+
+	}
+    if(pendingUpdateFlag == 0x01)
+    e9c8:	91 e0       	ldi	r25, 0x01	; 1
+    e9ca:	69 16       	cp	r6, r25
+    e9cc:	d1 f2       	breq	.-76     	; 0xe982 <main+0x15e>
+    		sendReadyForFwUpdate();
+		}
+    }
+
+
+    if (scbyTicksPending != 0) //Ticks Pending != 0
+    e9ce:	80 91 5c 03 	lds	r24, 0x035C	; 0x80035c <scbyTicksPending>
+    e9d2:	88 23       	and	r24, r24
+    e9d4:	09 f4       	brne	.+2      	; 0xe9d8 <main+0x1b4>
+    e9d6:	41 c0       	rjmp	.+130    	; 0xea5a <main+0x236>
+    {
+        scbyTicksPending--;
+    e9d8:	81 50       	subi	r24, 0x01	; 1
+    e9da:	80 93 5c 03 	sts	0x035C, r24	; 0x80035c <scbyTicksPending>
+        if (scbyCurrentTick == LAST_TICK)
+    e9de:	80 91 5d 03 	lds	r24, 0x035D	; 0x80035d <scbyCurrentTick>
+    e9e2:	8f 3f       	cpi	r24, 0xFF	; 255
+    e9e4:	19 f4       	brne	.+6      	; 0xe9ec <main+0x1c8>
+        {
+            scbyCurrentTick = 0;
+    e9e6:	10 92 5d 03 	sts	0x035D, r1	; 0x80035d <scbyCurrentTick>
+    e9ea:	03 c0       	rjmp	.+6      	; 0xe9f2 <main+0x1ce>
+        }
+        else
+        {
+            scbyCurrentTick++;
+    e9ec:	8f 5f       	subi	r24, 0xFF	; 255
+    e9ee:	80 93 5d 03 	sts	0x035D, r24	; 0x80035d <scbyCurrentTick>
+        }
+
+        //every ~0.97 milli sec
+        if (scbyCurrentTick & RUN_2_TICK_MASK)//Run 2 Tick Tasks
+    e9f2:	80 91 5d 03 	lds	r24, 0x035D	; 0x80035d <scbyCurrentTick>
+    e9f6:	80 ff       	sbrs	r24, 0
+    e9f8:	be cf       	rjmp	.-132    	; 0xe976 <main+0x152>
+        {
+
+			if((pendingUpdateFlag != 0x01) && (!wifiConfigDone))
+    e9fa:	e1 e0       	ldi	r30, 0x01	; 1
+    e9fc:	6e 16       	cp	r6, r30
+    e9fe:	31 f0       	breq	.+12     	; 0xea0c <main+0x1e8>
+    ea00:	80 91 37 02 	lds	r24, 0x0237	; 0x800237 <wifiConfigDone>
+    ea04:	81 11       	cpse	r24, r1
+    ea06:	02 c0       	rjmp	.+4      	; 0xea0c <main+0x1e8>
+			{
+				stepInitWiFiModule();
+    ea08:	0e 94 bc 77 	call	0xef78	; 0xef78 <stepInitWiFiModule>
+			}
+            if((wifiConfigDone) && (validAppFlag == 0))
+    ea0c:	10 91 37 02 	lds	r17, 0x0237	; 0x800237 <wifiConfigDone>
+    ea10:	11 23       	and	r17, r17
+    ea12:	21 f0       	breq	.+8      	; 0xea1c <main+0x1f8>
+    ea14:	71 10       	cpse	r7, r1
+    ea16:	02 c0       	rjmp	.+4      	; 0xea1c <main+0x1f8>
+            {
+                JumpToApp();
+    ea18:	0e 94 a2 73 	call	0xe744	; 0xe744 <JumpToApp>
+            }
+
+            toggleCount++;
+    ea1c:	21 96       	adiw	r28, 0x01	; 1
+
+            if(toggleCount > flashCount)
+    ea1e:	80 91 2b 02 	lds	r24, 0x022B	; 0x80022b <flashCount>
+    ea22:	90 91 2c 02 	lds	r25, 0x022C	; 0x80022c <flashCount+0x1>
+    ea26:	8c 17       	cp	r24, r28
+    ea28:	9d 07       	cpc	r25, r29
+    ea2a:	98 f4       	brcc	.+38     	; 0xea52 <main+0x22e>
+            {
+                if(!wifiConfigDone)
+                {
+                    TOGGLE_ROW3_LED;
+    ea2c:	88 b1       	in	r24, 0x08	; 8
+    ea2e:	83 25       	eor	r24, r3
+    ea30:	88 b9       	out	0x08, r24	; 8
+
+            toggleCount++;
+
+            if(toggleCount > flashCount)
+            {
+                if(!wifiConfigDone)
+    ea32:	11 23       	and	r17, r17
+    ea34:	61 f0       	breq	.+24     	; 0xea4e <main+0x22a>
+                    TOGGLE_ROW3_LED;
+                }
+                else
+                {
+                    TOGGLE_ROW3_LED;
+                    TOGGLE_ROW4_LED;
+    ea36:	85 b1       	in	r24, 0x05	; 5
+    ea38:	f2 e0       	ldi	r31, 0x02	; 2
+    ea3a:	8f 27       	eor	r24, r31
+    ea3c:	85 b9       	out	0x05, r24	; 5
+                    TOGGLE_ROW2_LED;
+    ea3e:	85 b1       	in	r24, 0x05	; 5
+    ea40:	98 e0       	ldi	r25, 0x08	; 8
+    ea42:	89 27       	eor	r24, r25
+    ea44:	85 b9       	out	0x05, r24	; 5
+                    TOGGLE_LED;
+    ea46:	85 b1       	in	r24, 0x05	; 5
+    ea48:	e0 e1       	ldi	r30, 0x10	; 16
+    ea4a:	8e 27       	eor	r24, r30
+    ea4c:	85 b9       	out	0x05, r24	; 5
+                }
+                toggleCount = 0;
+    ea4e:	c0 e0       	ldi	r28, 0x00	; 0
+    ea50:	d0 e0       	ldi	r29, 0x00	; 0
+            }
+
+            wdt_reset();
+    ea52:	a8 95       	wdr
+
+            processValidAsipMessages();
+    ea54:	0e 94 4d 72 	call	0xe49a	; 0xe49a <processValidAsipMessages>
+    ea58:	8e cf       	rjmp	.-228    	; 0xe976 <main+0x152>
+
+        }//every ~0.97 milli sec
+    }
+	else//will run all the time otherwise when a 1 tick or 2 tick task is not running
+	{
+		wdt_reset();
+    ea5a:	a8 95       	wdr
+        if (getPageBufferUsed() >= SPM_PAGESIZE)  // Enough data has arrived to process
+    ea5c:	0e 94 aa 73 	call	0xe754	; 0xe754 <getPageBufferUsed>
+    ea60:	8f 3f       	cpi	r24, 0xFF	; 255
+    ea62:	91 05       	cpc	r25, r1
+    ea64:	09 f0       	breq	.+2      	; 0xea68 <main+0x244>
+    ea66:	08 f4       	brcc	.+2      	; 0xea6a <main+0x246>
+    ea68:	5e c0       	rjmp	.+188    	; 0xeb26 <main+0x302>
+		{
+
+			_CLI();//disable interrupts
+    ea6a:	f8 94       	cli
+			boot_page_erase(scdwAddress);
+    ea6c:	80 90 53 02 	lds	r8, 0x0253	; 0x800253 <scdwAddress>
+    ea70:	90 90 54 02 	lds	r9, 0x0254	; 0x800254 <scdwAddress+0x1>
+    ea74:	a0 90 55 02 	lds	r10, 0x0255	; 0x800255 <scdwAddress+0x2>
+    ea78:	b0 90 56 02 	lds	r11, 0x0256	; 0x800256 <scdwAddress+0x3>
+    ea7c:	83 e0       	ldi	r24, 0x03	; 3
+    ea7e:	f4 01       	movw	r30, r8
+    ea80:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f0057>
+    ea84:	e8 95       	spm
+			while(boot_rww_busy())
+    ea86:	07 b6       	in	r0, 0x37	; 55
+    ea88:	06 fe       	sbrs	r0, 6
+    ea8a:	04 c0       	rjmp	.+8      	; 0xea94 <main+0x270>
+			{
+				boot_rww_enable();
+    ea8c:	40 92 57 00 	sts	0x0057, r4	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f0057>
+    ea90:	e8 95       	spm
+    ea92:	f9 cf       	rjmp	.-14     	; 0xea86 <main+0x262>
+    ea94:	00 e0       	ldi	r16, 0x00	; 0
+    ea96:	10 e0       	ldi	r17, 0x00	; 0
+			}
+
+			//prepare for the page write
+			for (wJ = 0; wJ < SPM_PAGESIZE; wJ += 2)
+			{
+				pageTemp[0] = popPageBuffer();
+    ea98:	0e 94 c0 73 	call	0xe780	; 0xe780 <popPageBuffer>
+    ea9c:	28 2e       	mov	r2, r24
+    ea9e:	e8 2e       	mov	r14, r24
+				pageTemp[1] = popPageBuffer();
+    eaa0:	0e 94 c0 73 	call	0xe780	; 0xe780 <popPageBuffer>
+    eaa4:	f8 2e       	mov	r15, r24
+				boot_page_fill(wJ, *(WORD*) pageTemp);
+    eaa6:	f8 01       	movw	r30, r16
+    eaa8:	07 01       	movw	r0, r14
+    eaaa:	50 92 57 00 	sts	0x0057, r5	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f0057>
+    eaae:	e8 95       	spm
+    eab0:	11 24       	eor	r1, r1
+				scbyChksm2 = scbyChksm2 + pageTemp[0] + pageTemp[1];
+    eab2:	90 e0       	ldi	r25, 0x00	; 0
+    eab4:	a0 e0       	ldi	r26, 0x00	; 0
+    eab6:	b0 e0       	ldi	r27, 0x00	; 0
+    eab8:	82 0d       	add	r24, r2
+    eaba:	91 1d       	adc	r25, r1
+    eabc:	a1 1d       	adc	r26, r1
+    eabe:	b1 1d       	adc	r27, r1
+    eac0:	40 91 4f 02 	lds	r20, 0x024F	; 0x80024f <scbyChksm2>
+    eac4:	50 91 50 02 	lds	r21, 0x0250	; 0x800250 <scbyChksm2+0x1>
+    eac8:	60 91 51 02 	lds	r22, 0x0251	; 0x800251 <scbyChksm2+0x2>
+    eacc:	70 91 52 02 	lds	r23, 0x0252	; 0x800252 <scbyChksm2+0x3>
+    ead0:	84 0f       	add	r24, r20
+    ead2:	95 1f       	adc	r25, r21
+    ead4:	a6 1f       	adc	r26, r22
+    ead6:	b7 1f       	adc	r27, r23
+    ead8:	80 93 4f 02 	sts	0x024F, r24	; 0x80024f <scbyChksm2>
+    eadc:	90 93 50 02 	sts	0x0250, r25	; 0x800250 <scbyChksm2+0x1>
+    eae0:	a0 93 51 02 	sts	0x0251, r26	; 0x800251 <scbyChksm2+0x2>
+    eae4:	b0 93 52 02 	sts	0x0252, r27	; 0x800252 <scbyChksm2+0x3>
+			{
+				boot_rww_enable();
+			}
+
+			//prepare for the page write
+			for (wJ = 0; wJ < SPM_PAGESIZE; wJ += 2)
+    eae8:	0e 5f       	subi	r16, 0xFE	; 254
+    eaea:	1f 4f       	sbci	r17, 0xFF	; 255
+    eaec:	01 15       	cp	r16, r1
+    eaee:	f1 e0       	ldi	r31, 0x01	; 1
+    eaf0:	1f 07       	cpc	r17, r31
+    eaf2:	91 f6       	brne	.-92     	; 0xea98 <main+0x274>
+				boot_page_fill(wJ, *(WORD*) pageTemp);
+				scbyChksm2 = scbyChksm2 + pageTemp[0] + pageTemp[1];
+			}
+
+			//finally write to the page
+			boot_page_write(scdwAddress);
+    eaf4:	85 e0       	ldi	r24, 0x05	; 5
+    eaf6:	f4 01       	movw	r30, r8
+    eaf8:	80 93 57 00 	sts	0x0057, r24	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f0057>
+    eafc:	e8 95       	spm
+			scdwAddress = scdwAddress + SPM_PAGESIZE;
+    eafe:	9f ef       	ldi	r25, 0xFF	; 255
+    eb00:	99 1a       	sub	r9, r25
+    eb02:	a9 0a       	sbc	r10, r25
+    eb04:	b9 0a       	sbc	r11, r25
+    eb06:	80 92 53 02 	sts	0x0253, r8	; 0x800253 <scdwAddress>
+    eb0a:	90 92 54 02 	sts	0x0254, r9	; 0x800254 <scdwAddress+0x1>
+    eb0e:	a0 92 55 02 	sts	0x0255, r10	; 0x800255 <scdwAddress+0x2>
+    eb12:	b0 92 56 02 	sts	0x0256, r11	; 0x800256 <scdwAddress+0x3>
+			while(boot_rww_busy())
+    eb16:	07 b6       	in	r0, 0x37	; 55
+    eb18:	06 fe       	sbrs	r0, 6
+    eb1a:	04 c0       	rjmp	.+8      	; 0xeb24 <main+0x300>
+			{
+				boot_rww_enable();
+    eb1c:	40 92 57 00 	sts	0x0057, r4	; 0x800057 <__TEXT_REGION_LENGTH__+0x7f0057>
+    eb20:	e8 95       	spm
+    eb22:	f9 cf       	rjmp	.-14     	; 0xeb16 <main+0x2f2>
+			}
+			_SEI();//enable interrupts
+    eb24:	78 94       	sei
+
+			////sendProgDataAck(); //send Ack
+		}//if (getPageBufferUsed() > SPM_PAGESIZE)
+
+		//if (checksumRequestFlag == 1) //request for checksum has come from display
+		if(fwUpdateCompleteFlag)
+    eb26:	80 91 38 02 	lds	r24, 0x0238	; 0x800238 <fwUpdateCompleteFlag>
+    eb2a:	88 23       	and	r24, r24
+    eb2c:	09 f4       	brne	.+2      	; 0xeb30 <main+0x30c>
+    eb2e:	23 cf       	rjmp	.-442    	; 0xe976 <main+0x152>
+        {
+			receivedChecksum = getReceivedChecksum();
+    eb30:	0e 94 99 73 	call	0xe732	; 0xe732 <getReceivedChecksum>
+    eb34:	8b 01       	movw	r16, r22
+    eb36:	9c 01       	movw	r18, r24
+    eb38:	40 91 4b 02 	lds	r20, 0x024B	; 0x80024b <scbyChksm3>
+    eb3c:	50 91 4c 02 	lds	r21, 0x024C	; 0x80024c <scbyChksm3+0x1>
+    eb40:	60 91 4d 02 	lds	r22, 0x024D	; 0x80024d <scbyChksm3+0x2>
+    eb44:	70 91 4e 02 	lds	r23, 0x024E	; 0x80024e <scbyChksm3+0x3>
+    eb48:	80 e0       	ldi	r24, 0x00	; 0
+    eb4a:	90 e0       	ldi	r25, 0x00	; 0
+    eb4c:	dc 01       	movw	r26, r24
+			//now we will calculate the checksum
+			scdwAddress = 0;
+
+ 			while (scdwAddress < 57344)
+			{
+				scbyChksm3 = scbyChksm3 + pgm_read_byte_near((WORD)scdwAddress);
+    eb4e:	fc 01       	movw	r30, r24
+    eb50:	b4 90       	lpm	r11, Z
+    eb52:	4b 0d       	add	r20, r11
+    eb54:	51 1d       	adc	r21, r1
+    eb56:	61 1d       	adc	r22, r1
+    eb58:	71 1d       	adc	r23, r1
+				scdwAddress++;
+    eb5a:	01 96       	adiw	r24, 0x01	; 1
+    eb5c:	a1 1d       	adc	r26, r1
+    eb5e:	b1 1d       	adc	r27, r1
+
+            //checksumRequestFlag = 0; //reset the request
+			//now we will calculate the checksum
+			scdwAddress = 0;
+
+ 			while (scdwAddress < 57344)
+    eb60:	81 15       	cp	r24, r1
+    eb62:	f0 ee       	ldi	r31, 0xE0	; 224
+    eb64:	9f 07       	cpc	r25, r31
+    eb66:	a1 05       	cpc	r26, r1
+    eb68:	b1 05       	cpc	r27, r1
+    eb6a:	89 f7       	brne	.-30     	; 0xeb4e <main+0x32a>
+    eb6c:	40 93 4b 02 	sts	0x024B, r20	; 0x80024b <scbyChksm3>
+    eb70:	50 93 4c 02 	sts	0x024C, r21	; 0x80024c <scbyChksm3+0x1>
+    eb74:	60 93 4d 02 	sts	0x024D, r22	; 0x80024d <scbyChksm3+0x2>
+    eb78:	70 93 4e 02 	sts	0x024E, r23	; 0x80024e <scbyChksm3+0x3>
+    eb7c:	80 93 53 02 	sts	0x0253, r24	; 0x800253 <scdwAddress>
+    eb80:	90 93 54 02 	sts	0x0254, r25	; 0x800254 <scdwAddress+0x1>
+    eb84:	a0 93 55 02 	sts	0x0255, r26	; 0x800255 <scdwAddress+0x2>
+    eb88:	b0 93 56 02 	sts	0x0256, r27	; 0x800256 <scdwAddress+0x3>
+			{
+				scbyChksm3 = scbyChksm3 + pgm_read_byte_near((WORD)scdwAddress);
+				scdwAddress++;
+			}
+
+            if((scbyChksm2 == receivedChecksum) && (scbyChksm3 == receivedChecksum))
+    eb8c:	80 91 4f 02 	lds	r24, 0x024F	; 0x80024f <scbyChksm2>
+    eb90:	90 91 50 02 	lds	r25, 0x0250	; 0x800250 <scbyChksm2+0x1>
+    eb94:	a0 91 51 02 	lds	r26, 0x0251	; 0x800251 <scbyChksm2+0x2>
+    eb98:	b0 91 52 02 	lds	r27, 0x0252	; 0x800252 <scbyChksm2+0x3>
+    eb9c:	08 17       	cp	r16, r24
+    eb9e:	19 07       	cpc	r17, r25
+    eba0:	2a 07       	cpc	r18, r26
+    eba2:	3b 07       	cpc	r19, r27
+    eba4:	d1 f4       	brne	.+52     	; 0xebda <main+0x3b6>
+    eba6:	04 17       	cp	r16, r20
+    eba8:	15 07       	cpc	r17, r21
+    ebaa:	26 07       	cpc	r18, r22
+    ebac:	37 07       	cpc	r19, r23
+    ebae:	a9 f4       	brne	.+42     	; 0xebda <main+0x3b6>
+            {
+                // Success!!
+                // set the flag in EE as program is valid
+                _CLI();
+    ebb0:	f8 94       	cli
+                eeprom_busy_wait();
+    ebb2:	f9 99       	sbic	0x1f, 1	; 31
+    ebb4:	fe cf       	rjmp	.-4      	; 0xebb2 <main+0x38e>
+                eeprom_write_byte((BYTE*)EE_PROGM_DATA_VALID_LOC, 0);
+    ebb6:	60 e0       	ldi	r22, 0x00	; 0
+    ebb8:	8d e6       	ldi	r24, 0x6D	; 109
+    ebba:	97 e0       	ldi	r25, 0x07	; 7
+    ebbc:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+                eeprom_busy_wait();
+    ebc0:	f9 99       	sbic	0x1f, 1	; 31
+    ebc2:	fe cf       	rjmp	.-4      	; 0xebc0 <main+0x39c>
+                eeprom_write_byte((BYTE*)EE_FW_UPDATE_PENDING_LOC, 0);
+    ebc4:	60 e0       	ldi	r22, 0x00	; 0
+    ebc6:	8a e6       	ldi	r24, 0x6A	; 106
+    ebc8:	97 e0       	ldi	r25, 0x07	; 7
+    ebca:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+                validAppFlag = 0;
+                eeprom_busy_wait();
+    ebce:	f9 99       	sbic	0x1f, 1	; 31
+    ebd0:	fe cf       	rjmp	.-4      	; 0xebce <main+0x3aa>
+                JumpToApp();
+    ebd2:	0e 94 a2 73 	call	0xe744	; 0xe744 <JumpToApp>
+                _CLI();
+                eeprom_busy_wait();
+                eeprom_write_byte((BYTE*)EE_PROGM_DATA_VALID_LOC, 0);
+                eeprom_busy_wait();
+                eeprom_write_byte((BYTE*)EE_FW_UPDATE_PENDING_LOC, 0);
+                validAppFlag = 0;
+    ebd6:	71 2c       	mov	r7, r1
+                eeprom_busy_wait();
+                JumpToApp();
+    ebd8:	ce ce       	rjmp	.-612    	; 0xe976 <main+0x152>
+            {
+                // Checksum fail :(
+
+                // Reset everything for future update attempts
+                //appErrorMsgSent = 0;
+                startBootMsgSent = 0;
+    ebda:	10 92 39 02 	sts	0x0239, r1	; 0x800239 <startBootMsgSent>
+                readyToUpdateFlag = 0;
+                fwUpdateCompleteFlag = 0;
+    ebde:	10 92 38 02 	sts	0x0238, r1	; 0x800238 <fwUpdateCompleteFlag>
+                programPacketReceived = 0;
+                programPacketCount = 0;
+                appProgrammingStarted = 0;
+                //scwIndex = 0;
+                scdwAddress = 0;
+    ebe2:	10 92 53 02 	sts	0x0253, r1	; 0x800253 <scdwAddress>
+    ebe6:	10 92 54 02 	sts	0x0254, r1	; 0x800254 <scdwAddress+0x1>
+    ebea:	10 92 55 02 	sts	0x0255, r1	; 0x800255 <scdwAddress+0x2>
+    ebee:	10 92 56 02 	sts	0x0256, r1	; 0x800256 <scdwAddress+0x3>
+                //checksumRequestFlag = 0;
+                //scbySleep = 0;
+                //scflEeUpdateReq = 0;
+                //scbyChksm1 = 0;
+                scbyChksm2 = 0;
+    ebf2:	10 92 4f 02 	sts	0x024F, r1	; 0x80024f <scbyChksm2>
+    ebf6:	10 92 50 02 	sts	0x0250, r1	; 0x800250 <scbyChksm2+0x1>
+    ebfa:	10 92 51 02 	sts	0x0251, r1	; 0x800251 <scbyChksm2+0x2>
+    ebfe:	10 92 52 02 	sts	0x0252, r1	; 0x800252 <scbyChksm2+0x3>
+                scbyChksm3 = 0;
+    ec02:	10 92 4b 02 	sts	0x024B, r1	; 0x80024b <scbyChksm3>
+    ec06:	10 92 4c 02 	sts	0x024C, r1	; 0x80024c <scbyChksm3+0x1>
+    ec0a:	10 92 4d 02 	sts	0x024D, r1	; 0x80024d <scbyChksm3+0x2>
+    ec0e:	10 92 4e 02 	sts	0x024E, r1	; 0x80024e <scbyChksm3+0x3>
+    ec12:	b1 ce       	rjmp	.-670    	; 0xe976 <main+0x152>
+
+0000ec14 <pushPageBuffer>:
+/* Pushes a buffer onto the page write buffer. If the buffer given is
+   larger than the available amount of ram, the write will be truncated.
+   Number of bytes written is returned.								*/
+/************************************************************************/
+WORD pushPageBuffer(BYTE * pBuf, WORD nBytes)
+{
+    ec14:	0f 93       	push	r16
+    ec16:	1f 93       	push	r17
+    ec18:	cf 93       	push	r28
+    ec1a:	df 93       	push	r29
+    ec1c:	8c 01       	movw	r16, r24
+    ec1e:	eb 01       	movw	r28, r22
+    WORD nMaxPush;
+    WORD i;
+
+    nMaxPush = PAGE_BUFFER_SIZE - getPageBufferUsed() - 1;
+    ec20:	0e 94 aa 73 	call	0xe754	; 0xe754 <getPageBufferUsed>
+    ec24:	20 e0       	ldi	r18, 0x00	; 0
+    ec26:	31 e0       	ldi	r19, 0x01	; 1
+    ec28:	a9 01       	movw	r20, r18
+    ec2a:	48 1b       	sub	r20, r24
+    ec2c:	59 0b       	sbc	r21, r25
+    ec2e:	ca 01       	movw	r24, r20
+    ec30:	c4 17       	cp	r28, r20
+    ec32:	d5 07       	cpc	r29, r21
+    ec34:	08 f4       	brcc	.+2      	; 0xec38 <pushPageBuffer+0x24>
+    ec36:	ce 01       	movw	r24, r28
+    ec38:	20 91 57 02 	lds	r18, 0x0257	; 0x800257 <scwProgPgTail>
+    ec3c:	30 91 58 02 	lds	r19, 0x0258	; 0x800258 <scwProgPgTail+0x1>
+    ec40:	f8 01       	movw	r30, r16
+    ec42:	b8 01       	movw	r22, r16
+    ec44:	68 0f       	add	r22, r24
+    ec46:	79 1f       	adc	r23, r25
+    if(nBytes > nMaxPush)
+    {
+        nBytes = nMaxPush;
+    }
+
+    for(i = 0; i < nBytes; i++)
+    ec48:	e6 17       	cp	r30, r22
+    ec4a:	f7 07       	cpc	r31, r23
+    ec4c:	81 f0       	breq	.+32     	; 0xec6e <pushPageBuffer+0x5a>
+    {
+        scbyProgPgBuff[scwProgPgTail++] = pBuf[i];
+    ec4e:	a9 01       	movw	r20, r18
+    ec50:	4f 5f       	subi	r20, 0xFF	; 255
+    ec52:	5f 4f       	sbci	r21, 0xFF	; 255
+    ec54:	a1 91       	ld	r26, Z+
+    ec56:	e9 01       	movw	r28, r18
+    ec58:	c5 5a       	subi	r28, 0xA5	; 165
+    ec5a:	dd 4f       	sbci	r29, 0xFD	; 253
+    ec5c:	a8 83       	st	Y, r26
+        if(scwProgPgTail >= PAGE_BUFFER_SIZE)
+    ec5e:	41 30       	cpi	r20, 0x01	; 1
+    ec60:	21 e0       	ldi	r18, 0x01	; 1
+    ec62:	52 07       	cpc	r21, r18
+    ec64:	10 f0       	brcs	.+4      	; 0xec6a <pushPageBuffer+0x56>
+        {
+            scwProgPgTail = 0;
+    ec66:	40 e0       	ldi	r20, 0x00	; 0
+    ec68:	50 e0       	ldi	r21, 0x00	; 0
+    ec6a:	9a 01       	movw	r18, r20
+    ec6c:	ed cf       	rjmp	.-38     	; 0xec48 <pushPageBuffer+0x34>
+    ec6e:	30 93 58 02 	sts	0x0258, r19	; 0x800258 <scwProgPgTail+0x1>
+    ec72:	20 93 57 02 	sts	0x0257, r18	; 0x800257 <scwProgPgTail>
+        }
+    }
+
+    return nBytes;
+}
+    ec76:	df 91       	pop	r29
+    ec78:	cf 91       	pop	r28
+    ec7a:	1f 91       	pop	r17
+    ec7c:	0f 91       	pop	r16
+    ec7e:	08 95       	ret
+
+0000ec80 <setFwUpdateCompleteFlag>:
+
+void setFwUpdateCompleteFlag(void)
+{
+    fwUpdateCompleteFlag = 1;
+    ec80:	81 e0       	ldi	r24, 0x01	; 1
+    ec82:	80 93 38 02 	sts	0x0238, r24	; 0x800238 <fwUpdateCompleteFlag>
+    ec86:	08 95       	ret
+
+0000ec88 <readHwPartNum>:
+        serialNum[i] = eeprom_read_byte((BYTE *)(EE_SERIAL_NUM_LOC + i));
+    }
+}
+
+void readHwPartNum(BYTE * partNumPtr)
+{
+    ec88:	0f 93       	push	r16
+    ec8a:	1f 93       	push	r17
+    ec8c:	cf 93       	push	r28
+    ec8e:	df 93       	push	r29
+    ec90:	8c 01       	movw	r16, r24
+    ec92:	c0 eb       	ldi	r28, 0xB0	; 176
+    ec94:	d7 e0       	ldi	r29, 0x07	; 7
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_HW_PART_NUM; i++)
+    {
+        eeprom_busy_wait();
+    ec96:	f9 99       	sbic	0x1f, 1	; 31
+    ec98:	fe cf       	rjmp	.-4      	; 0xec96 <readHwPartNum+0xe>
+        partNumPtr[i] = eeprom_read_byte((BYTE *)(EE_HW_PART_NUM_LOC + i));
+    ec9a:	ce 01       	movw	r24, r28
+    ec9c:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    eca0:	f8 01       	movw	r30, r16
+    eca2:	81 93       	st	Z+, r24
+    eca4:	8f 01       	movw	r16, r30
+    eca6:	21 96       	adiw	r28, 0x01	; 1
+
+void readHwPartNum(BYTE * partNumPtr)
+{
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_HW_PART_NUM; i++)
+    eca8:	c0 3c       	cpi	r28, 0xC0	; 192
+    ecaa:	f7 e0       	ldi	r31, 0x07	; 7
+    ecac:	df 07       	cpc	r29, r31
+    ecae:	99 f7       	brne	.-26     	; 0xec96 <readHwPartNum+0xe>
+    {
+        eeprom_busy_wait();
+        partNumPtr[i] = eeprom_read_byte((BYTE *)(EE_HW_PART_NUM_LOC + i));
+    }    
+}
+    ecb0:	df 91       	pop	r29
+    ecb2:	cf 91       	pop	r28
+    ecb4:	1f 91       	pop	r17
+    ecb6:	0f 91       	pop	r16
+    ecb8:	08 95       	ret
+
+0000ecba <readHwVersion>:
+
+void readHwVersion(BYTE * versionPtr)
+{
+    ecba:	0f 93       	push	r16
+    ecbc:	1f 93       	push	r17
+    ecbe:	cf 93       	push	r28
+    ecc0:	df 93       	push	r29
+    ecc2:	8c 01       	movw	r16, r24
+    ecc4:	c0 ed       	ldi	r28, 0xD0	; 208
+    ecc6:	d7 e0       	ldi	r29, 0x07	; 7
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_HW_VER; i++)
+    {
+        eeprom_busy_wait();
+    ecc8:	f9 99       	sbic	0x1f, 1	; 31
+    ecca:	fe cf       	rjmp	.-4      	; 0xecc8 <readHwVersion+0xe>
+        versionPtr[i] = eeprom_read_byte((BYTE *)(EE_HW_VER_LOC + i));
+    eccc:	ce 01       	movw	r24, r28
+    ecce:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    ecd2:	f8 01       	movw	r30, r16
+    ecd4:	81 93       	st	Z+, r24
+    ecd6:	8f 01       	movw	r16, r30
+    ecd8:	21 96       	adiw	r28, 0x01	; 1
+
+void readHwVersion(BYTE * versionPtr)
+{
+    BYTE i;
+    
+    for(i = 0; i < LENGTH_HW_VER; i++)
+    ecda:	c0 3e       	cpi	r28, 0xE0	; 224
+    ecdc:	f7 e0       	ldi	r31, 0x07	; 7
+    ecde:	df 07       	cpc	r29, r31
+    ece0:	99 f7       	brne	.-26     	; 0xecc8 <readHwVersion+0xe>
+    {
+        eeprom_busy_wait();
+        versionPtr[i] = eeprom_read_byte((BYTE *)(EE_HW_VER_LOC + i));
+    }
+}
+    ece2:	df 91       	pop	r29
+    ece4:	cf 91       	pop	r28
+    ece6:	1f 91       	pop	r17
+    ece8:	0f 91       	pop	r16
+    ecea:	08 95       	ret
+
+0000ecec <readFwPartNum>:
+
+void readFwPartNum(BYTE * fwPartNum)
+{  
+    strcpy_P((char *)fwPartNum, FwPartNum);
+    ecec:	63 ec       	ldi	r22, 0xC3	; 195
+    ecee:	70 ee       	ldi	r23, 0xE0	; 224
+    ecf0:	0c 94 aa 79 	jmp	0xf354	; 0xf354 <strcpy_P>
+
+0000ecf4 <getSerialNumPtr>:
+}
+
+char * getSerialNumPtr(void)
+{
+    return &serialNum[0];
+}
+    ecf4:	8d e2       	ldi	r24, 0x2D	; 45
+    ecf6:	92 e0       	ldi	r25, 0x02	; 2
+    ecf8:	08 95       	ret
+
+0000ecfa <getFwVersionPtr>:
+
+// Returns a pointer to the characters of the firmware version string
+char * getFwVersionPtr(void)
+{
+    return (char *)(&fwVersion[0]);
+}
+    ecfa:	8b e3       	ldi	r24, 0x3B	; 59
+    ecfc:	92 e0       	ldi	r25, 0x02	; 2
+    ecfe:	08 95       	ret
+
+0000ed00 <compareSerialNums>:
+
+BYTE compareSerialNums(BYTE * num1, BYTE * num2)
+{
+    ed00:	fb 01       	movw	r30, r22
+    ed02:	9c 01       	movw	r18, r24
+    ed04:	2c 5f       	subi	r18, 0xFC	; 252
+    ed06:	3f 4f       	sbci	r19, 0xFF	; 255
+    BYTE i;
+    BYTE result = 0;
+
+    for(i = 0; i < 4; i++)
+    {
+        if((*(num1 + i)) == (*(num2 + i)))
+    ed08:	dc 01       	movw	r26, r24
+    ed0a:	5d 91       	ld	r21, X+
+    ed0c:	cd 01       	movw	r24, r26
+    ed0e:	41 91       	ld	r20, Z+
+    ed10:	54 13       	cpse	r21, r20
+    ed12:	05 c0       	rjmp	.+10     	; 0xed1e <compareSerialNums+0x1e>
+BYTE compareSerialNums(BYTE * num1, BYTE * num2)
+{
+    BYTE i;
+    BYTE result = 0;
+
+    for(i = 0; i < 4; i++)
+    ed14:	a2 17       	cp	r26, r18
+    ed16:	b3 07       	cpc	r27, r19
+    ed18:	b9 f7       	brne	.-18     	; 0xed08 <compareSerialNums+0x8>
+    {
+        if((*(num1 + i)) == (*(num2 + i)))
+        {
+            result = 1;
+    ed1a:	81 e0       	ldi	r24, 0x01	; 1
+    ed1c:	08 95       	ret
+        }
+        else
+        {
+            result = 0;
+    ed1e:	80 e0       	ldi	r24, 0x00	; 0
+            break;
+        }
+    }
+
+    return result;
+}
+    ed20:	08 95       	ret
+
+0000ed22 <initUART>:
+	return TRUE;
+}
+
+
+void setExpectedWifiResponse(BYTE val)
+{
+    ed22:	10 92 60 03 	sts	0x0360, r1	; 0x800360 <wifiTxBufferHead>
+    ed26:	10 92 5f 03 	sts	0x035F, r1	; 0x80035f <wifiTxBufferTail>
+    ed2a:	10 92 5e 03 	sts	0x035E, r1	; 0x80035e <scfTX_Active>
+    ed2e:	e8 ec       	ldi	r30, 0xC8	; 200
+    ed30:	f0 e0       	ldi	r31, 0x00	; 0
+    ed32:	80 e8       	ldi	r24, 0x80	; 128
+    ed34:	80 83       	st	Z, r24
+    ed36:	80 81       	ld	r24, Z
+    ed38:	8f 60       	ori	r24, 0x0F	; 15
+    ed3a:	80 83       	st	Z, r24
+    ed3c:	83 e3       	ldi	r24, 0x33	; 51
+    ed3e:	90 e0       	ldi	r25, 0x00	; 0
+    ed40:	90 93 ce 00 	sts	0x00CE, r25	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7f00ce>
+    ed44:	80 93 cd 00 	sts	0x00CD, r24	; 0x8000cd <__TEXT_REGION_LENGTH__+0x7f00cd>
+    ed48:	80 e2       	ldi	r24, 0x20	; 32
+    ed4a:	80 93 cc 00 	sts	0x00CC, r24	; 0x8000cc <__TEXT_REGION_LENGTH__+0x7f00cc>
+    ed4e:	ea ec       	ldi	r30, 0xCA	; 202
+    ed50:	f0 e0       	ldi	r31, 0x00	; 0
+    ed52:	80 81       	ld	r24, Z
+    ed54:	8b 60       	ori	r24, 0x0B	; 11
+    ed56:	80 83       	st	Z, r24
+    ed58:	5f 98       	cbi	0x0b, 7	; 11
+    ed5a:	41 98       	cbi	0x08, 1	; 8
+    ed5c:	08 95       	ret
+
+0000ed5e <__vector_21>:
+    ed5e:	1f 92       	push	r1
+    ed60:	0f 92       	push	r0
+    ed62:	0f b6       	in	r0, 0x3f	; 63
+    ed64:	0f 92       	push	r0
+    ed66:	11 24       	eor	r1, r1
+    ed68:	2f 93       	push	r18
+    ed6a:	3f 93       	push	r19
+    ed6c:	4f 93       	push	r20
+    ed6e:	5f 93       	push	r21
+    ed70:	6f 93       	push	r22
+    ed72:	7f 93       	push	r23
+    ed74:	8f 93       	push	r24
+    ed76:	9f 93       	push	r25
+    ed78:	af 93       	push	r26
+    ed7a:	bf 93       	push	r27
+    ed7c:	ef 93       	push	r30
+    ed7e:	ff 93       	push	r31
+    ed80:	95 b1       	in	r25, 0x05	; 5
+    ed82:	88 e0       	ldi	r24, 0x08	; 8
+    ed84:	89 27       	eor	r24, r25
+    ed86:	85 b9       	out	0x05, r24	; 5
+    ed88:	e9 ec       	ldi	r30, 0xC9	; 201
+    ed8a:	f0 e0       	ldi	r31, 0x00	; 0
+    ed8c:	80 81       	ld	r24, Z
+    ed8e:	88 60       	ori	r24, 0x08	; 8
+    ed90:	80 83       	st	Z, r24
+    ed92:	e8 ec       	ldi	r30, 0xC8	; 200
+    ed94:	f0 e0       	ldi	r31, 0x00	; 0
+    ed96:	80 81       	ld	r24, Z
+    ed98:	80 68       	ori	r24, 0x80	; 128
+    ed9a:	80 83       	st	Z, r24
+    ed9c:	0e 94 91 76 	call	0xed22	; 0xed22 <initUART>
+    eda0:	ff 91       	pop	r31
+    eda2:	ef 91       	pop	r30
+    eda4:	bf 91       	pop	r27
+    eda6:	af 91       	pop	r26
+    eda8:	9f 91       	pop	r25
+    edaa:	8f 91       	pop	r24
+    edac:	7f 91       	pop	r23
+    edae:	6f 91       	pop	r22
+    edb0:	5f 91       	pop	r21
+    edb2:	4f 91       	pop	r20
+    edb4:	3f 91       	pop	r19
+    edb6:	2f 91       	pop	r18
+    edb8:	0f 90       	pop	r0
+    edba:	0f be       	out	0x3f, r0	; 63
+    edbc:	0f 90       	pop	r0
+    edbe:	1f 90       	pop	r1
+    edc0:	18 95       	reti
+
+0000edc2 <__vector_20>:
+    edc2:	1f 92       	push	r1
+    edc4:	0f 92       	push	r0
+    edc6:	0f b6       	in	r0, 0x3f	; 63
+    edc8:	0f 92       	push	r0
+    edca:	11 24       	eor	r1, r1
+    edcc:	2f 93       	push	r18
+    edce:	3f 93       	push	r19
+    edd0:	4f 93       	push	r20
+    edd2:	5f 93       	push	r21
+    edd4:	6f 93       	push	r22
+    edd6:	7f 93       	push	r23
+    edd8:	8f 93       	push	r24
+    edda:	9f 93       	push	r25
+    eddc:	af 93       	push	r26
+    edde:	bf 93       	push	r27
+    ede0:	ef 93       	push	r30
+    ede2:	ff 93       	push	r31
+    ede4:	80 91 c9 00 	lds	r24, 0x00C9	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7f00c9>
+    ede8:	80 ff       	sbrs	r24, 0
+    edea:	07 c0       	rjmp	.+14     	; 0xedfa <__vector_20+0x38>
+    edec:	80 91 d2 00 	lds	r24, 0x00D2	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7f00d2>
+    edf0:	0e 94 88 71 	call	0xe310	; 0xe310 <stepAsipStateMachine>
+    edf4:	81 e0       	ldi	r24, 0x01	; 1
+    edf6:	80 93 c9 00 	sts	0x00C9, r24	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7f00c9>
+    edfa:	80 91 c9 00 	lds	r24, 0x00C9	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7f00c9>
+    edfe:	81 ff       	sbrs	r24, 1
+    ee00:	1c c0       	rjmp	.+56     	; 0xee3a <__vector_20+0x78>
+    ee02:	e0 91 60 03 	lds	r30, 0x0360	; 0x800360 <wifiTxBufferHead>
+    ee06:	80 91 5f 03 	lds	r24, 0x035F	; 0x80035f <wifiTxBufferTail>
+    ee0a:	e8 17       	cp	r30, r24
+    ee0c:	89 f0       	breq	.+34     	; 0xee30 <__vector_20+0x6e>
+    ee0e:	81 e0       	ldi	r24, 0x01	; 1
+    ee10:	8e 0f       	add	r24, r30
+    ee12:	80 93 60 03 	sts	0x0360, r24	; 0x800360 <wifiTxBufferHead>
+    ee16:	f0 e0       	ldi	r31, 0x00	; 0
+    ee18:	ef 59       	subi	r30, 0x9F	; 159
+    ee1a:	fc 4f       	sbci	r31, 0xFC	; 252
+    ee1c:	80 81       	ld	r24, Z
+    ee1e:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7f00d2>
+    ee22:	80 91 60 03 	lds	r24, 0x0360	; 0x800360 <wifiTxBufferHead>
+    ee26:	87 ff       	sbrs	r24, 7
+    ee28:	05 c0       	rjmp	.+10     	; 0xee34 <__vector_20+0x72>
+    ee2a:	10 92 60 03 	sts	0x0360, r1	; 0x800360 <wifiTxBufferHead>
+    ee2e:	02 c0       	rjmp	.+4      	; 0xee34 <__vector_20+0x72>
+    ee30:	10 92 5e 03 	sts	0x035E, r1	; 0x80035e <scfTX_Active>
+    ee34:	82 e0       	ldi	r24, 0x02	; 2
+    ee36:	80 93 c9 00 	sts	0x00C9, r24	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7f00c9>
+    ee3a:	ff 91       	pop	r31
+    ee3c:	ef 91       	pop	r30
+    ee3e:	bf 91       	pop	r27
+    ee40:	af 91       	pop	r26
+    ee42:	9f 91       	pop	r25
+    ee44:	8f 91       	pop	r24
+    ee46:	7f 91       	pop	r23
+    ee48:	6f 91       	pop	r22
+    ee4a:	5f 91       	pop	r21
+    ee4c:	4f 91       	pop	r20
+    ee4e:	3f 91       	pop	r19
+    ee50:	2f 91       	pop	r18
+    ee52:	0f 90       	pop	r0
+    ee54:	0f be       	out	0x3f, r0	; 63
+    ee56:	0f 90       	pop	r0
+    ee58:	1f 90       	pop	r1
+    ee5a:	18 95       	reti
+
+0000ee5c <getUART_TxBytesFree>:
+    ee5c:	f8 94       	cli
+    ee5e:	80 91 60 03 	lds	r24, 0x0360	; 0x800360 <wifiTxBufferHead>
+    ee62:	90 91 5f 03 	lds	r25, 0x035F	; 0x80035f <wifiTxBufferTail>
+    ee66:	98 17       	cp	r25, r24
+    ee68:	10 f4       	brcc	.+4      	; 0xee6e <getUART_TxBytesFree+0x12>
+    ee6a:	81 50       	subi	r24, 0x01	; 1
+    ee6c:	03 c0       	rjmp	.+6      	; 0xee74 <getUART_TxBytesFree+0x18>
+    ee6e:	89 17       	cp	r24, r25
+    ee70:	18 f4       	brcc	.+6      	; 0xee78 <getUART_TxBytesFree+0x1c>
+    ee72:	81 58       	subi	r24, 0x81	; 129
+    ee74:	89 1b       	sub	r24, r25
+    ee76:	01 c0       	rjmp	.+2      	; 0xee7a <getUART_TxBytesFree+0x1e>
+    ee78:	8f e7       	ldi	r24, 0x7F	; 127
+    ee7a:	78 94       	sei
+    ee7c:	08 95       	ret
+
+0000ee7e <addBytesToWifiTxBuffer>:
+    ee7e:	1f 93       	push	r17
+    ee80:	cf 93       	push	r28
+    ee82:	df 93       	push	r29
+    ee84:	d8 2f       	mov	r29, r24
+    ee86:	19 2f       	mov	r17, r25
+    ee88:	c6 2f       	mov	r28, r22
+    ee8a:	0e 94 2e 77 	call	0xee5c	; 0xee5c <getUART_TxBytesFree>
+    ee8e:	8c 17       	cp	r24, r28
+    ee90:	88 f1       	brcs	.+98     	; 0xeef4 <addBytesToWifiTxBuffer+0x76>
+    ee92:	f8 94       	cli
+    ee94:	e0 91 5f 03 	lds	r30, 0x035F	; 0x80035f <wifiTxBufferTail>
+    ee98:	9d 2f       	mov	r25, r29
+    ee9a:	ad 2f       	mov	r26, r29
+    ee9c:	b1 2f       	mov	r27, r17
+    ee9e:	8a 2f       	mov	r24, r26
+    eea0:	89 1b       	sub	r24, r25
+    eea2:	8c 17       	cp	r24, r28
+    eea4:	58 f4       	brcc	.+22     	; 0xeebc <addBytesToWifiTxBuffer+0x3e>
+    eea6:	81 e0       	ldi	r24, 0x01	; 1
+    eea8:	8e 0f       	add	r24, r30
+    eeaa:	2d 91       	ld	r18, X+
+    eeac:	f0 e0       	ldi	r31, 0x00	; 0
+    eeae:	ef 59       	subi	r30, 0x9F	; 159
+    eeb0:	fc 4f       	sbci	r31, 0xFC	; 252
+    eeb2:	20 83       	st	Z, r18
+    eeb4:	87 fd       	sbrc	r24, 7
+    eeb6:	80 e0       	ldi	r24, 0x00	; 0
+    eeb8:	e8 2f       	mov	r30, r24
+    eeba:	f1 cf       	rjmp	.-30     	; 0xee9e <addBytesToWifiTxBuffer+0x20>
+    eebc:	e0 93 5f 03 	sts	0x035F, r30	; 0x80035f <wifiTxBufferTail>
+    eec0:	80 91 5e 03 	lds	r24, 0x035E	; 0x80035e <scfTX_Active>
+    eec4:	81 30       	cpi	r24, 0x01	; 1
+    eec6:	99 f0       	breq	.+38     	; 0xeeee <addBytesToWifiTxBuffer+0x70>
+    eec8:	81 e0       	ldi	r24, 0x01	; 1
+    eeca:	80 93 5e 03 	sts	0x035E, r24	; 0x80035e <scfTX_Active>
+    eece:	e0 91 60 03 	lds	r30, 0x0360	; 0x800360 <wifiTxBufferHead>
+    eed2:	8e 0f       	add	r24, r30
+    eed4:	80 93 60 03 	sts	0x0360, r24	; 0x800360 <wifiTxBufferHead>
+    eed8:	f0 e0       	ldi	r31, 0x00	; 0
+    eeda:	ef 59       	subi	r30, 0x9F	; 159
+    eedc:	fc 4f       	sbci	r31, 0xFC	; 252
+    eede:	80 81       	ld	r24, Z
+    eee0:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__TEXT_REGION_LENGTH__+0x7f00d2>
+    eee4:	80 91 60 03 	lds	r24, 0x0360	; 0x800360 <wifiTxBufferHead>
+    eee8:	87 fd       	sbrc	r24, 7
+    eeea:	10 92 60 03 	sts	0x0360, r1	; 0x800360 <wifiTxBufferHead>
+    eeee:	78 94       	sei
+    eef0:	81 e0       	ldi	r24, 0x01	; 1
+    eef2:	01 c0       	rjmp	.+2      	; 0xeef6 <addBytesToWifiTxBuffer+0x78>
+    eef4:	80 e0       	ldi	r24, 0x00	; 0
+    eef6:	df 91       	pop	r29
+    eef8:	cf 91       	pop	r28
+    eefa:	1f 91       	pop	r17
+    eefc:	08 95       	ret
+
+0000eefe <setUART_Baud>:
+
+
+
+void setUART_Baud(BYTE brr_reg)
+{
+	LINBRR = brr_reg;
+    eefe:	90 e0       	ldi	r25, 0x00	; 0
+    ef00:	90 93 ce 00 	sts	0x00CE, r25	; 0x8000ce <__TEXT_REGION_LENGTH__+0x7f00ce>
+    ef04:	80 93 cd 00 	sts	0x00CD, r24	; 0x8000cd <__TEXT_REGION_LENGTH__+0x7f00cd>
+    ef08:	08 95       	ret
+
+0000ef0a <getIsTX_Idle>:
+}
+
+BOOL getIsTX_Idle(void)
+{
+	return (wifiTxBufferHead == wifiTxBufferTail) && !(LINSIR & LBUSY);
+    ef0a:	90 91 60 03 	lds	r25, 0x0360	; 0x800360 <wifiTxBufferHead>
+    ef0e:	80 91 5f 03 	lds	r24, 0x035F	; 0x80035f <wifiTxBufferTail>
+    ef12:	98 13       	cpse	r25, r24
+    ef14:	08 c0       	rjmp	.+16     	; 0xef26 <getIsTX_Idle+0x1c>
+    ef16:	80 91 c9 00 	lds	r24, 0x00C9	; 0x8000c9 <__TEXT_REGION_LENGTH__+0x7f00c9>
+    ef1a:	82 fb       	bst	r24, 2
+    ef1c:	88 27       	eor	r24, r24
+    ef1e:	80 f9       	bld	r24, 0
+    ef20:	91 e0       	ldi	r25, 0x01	; 1
+    ef22:	89 27       	eor	r24, r25
+    ef24:	08 95       	ret
+    ef26:	80 e0       	ldi	r24, 0x00	; 0
+}
+    ef28:	08 95       	ret
+
+0000ef2a <setWifiResetHigh>:
+    return asipServerCID;
+}
+
+void setupFwUpdateTcpPort(void)
+{
+    sendWifiCommand(startTcpServerCommand);
+    ef2a:	59 98       	cbi	0x0b, 1	; 11
+    ef2c:	08 95       	ret
+
+0000ef2e <sendWifiCommand>:
+    ef2e:	0f 93       	push	r16
+    ef30:	1f 93       	push	r17
+    ef32:	cf 93       	push	r28
+    ef34:	df 93       	push	r29
+    ef36:	cd b7       	in	r28, 0x3d	; 61
+    ef38:	de b7       	in	r29, 0x3e	; 62
+    ef3a:	e2 97       	sbiw	r28, 0x32	; 50
+    ef3c:	0f b6       	in	r0, 0x3f	; 63
+    ef3e:	f8 94       	cli
+    ef40:	de bf       	out	0x3e, r29	; 62
+    ef42:	0f be       	out	0x3f, r0	; 63
+    ef44:	cd bf       	out	0x3d, r28	; 61
+    ef46:	8c 01       	movw	r16, r24
+    ef48:	bc 01       	movw	r22, r24
+    ef4a:	ce 01       	movw	r24, r28
+    ef4c:	01 96       	adiw	r24, 0x01	; 1
+    ef4e:	0e 94 aa 79 	call	0xf354	; 0xf354 <strcpy_P>
+    ef52:	c8 01       	movw	r24, r16
+    ef54:	0e 94 b1 79 	call	0xf362	; 0xf362 <__strlen_P>
+    ef58:	68 2f       	mov	r22, r24
+    ef5a:	ce 01       	movw	r24, r28
+    ef5c:	01 96       	adiw	r24, 0x01	; 1
+    ef5e:	0e 94 3f 77 	call	0xee7e	; 0xee7e <addBytesToWifiTxBuffer>
+    ef62:	e2 96       	adiw	r28, 0x32	; 50
+    ef64:	0f b6       	in	r0, 0x3f	; 63
+    ef66:	f8 94       	cli
+    ef68:	de bf       	out	0x3e, r29	; 62
+    ef6a:	0f be       	out	0x3f, r0	; 63
+    ef6c:	cd bf       	out	0x3d, r28	; 61
+    ef6e:	df 91       	pop	r29
+    ef70:	cf 91       	pop	r28
+    ef72:	1f 91       	pop	r17
+    ef74:	0f 91       	pop	r16
+    ef76:	08 95       	ret
+
+0000ef78 <stepInitWiFiModule>:
+    ef78:	cf 93       	push	r28
+    ef7a:	df 93       	push	r29
+    ef7c:	cd b7       	in	r28, 0x3d	; 61
+    ef7e:	de b7       	in	r29, 0x3e	; 62
+    ef80:	64 97       	sbiw	r28, 0x14	; 20
+    ef82:	0f b6       	in	r0, 0x3f	; 63
+    ef84:	f8 94       	cli
+    ef86:	de bf       	out	0x3e, r29	; 62
+    ef88:	0f be       	out	0x3f, r0	; 63
+    ef8a:	cd bf       	out	0x3d, r28	; 61
+    ef8c:	e0 91 e5 03 	lds	r30, 0x03E5	; 0x8003e5 <InitState.2175>
+    ef90:	8e 2f       	mov	r24, r30
+    ef92:	90 e0       	ldi	r25, 0x00	; 0
+    ef94:	87 31       	cpi	r24, 0x17	; 23
+    ef96:	91 05       	cpc	r25, r1
+    ef98:	08 f0       	brcs	.+2      	; 0xef9c <stepInitWiFiModule+0x24>
+    ef9a:	6f c1       	rjmp	.+734    	; 0xf27a <stepInitWiFiModule+0x302>
+    ef9c:	fc 01       	movw	r30, r24
+    ef9e:	ea 5b       	subi	r30, 0xBA	; 186
+    efa0:	ff 48       	sbci	r31, 0x8F	; 143
+    efa2:	0c 94 a4 79 	jmp	0xf348	; 0xf348 <__tablejump2__>
+    efa6:	41 98       	cbi	0x08, 1	; 8
+    efa8:	0e 94 95 77 	call	0xef2a	; 0xef2a <setWifiResetHigh>
+    efac:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    efb0:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    efb4:	01 96       	adiw	r24, 0x01	; 1
+    efb6:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    efba:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    efbe:	81 30       	cpi	r24, 0x01	; 1
+    efc0:	91 05       	cpc	r25, r1
+    efc2:	11 f4       	brne	.+4      	; 0xefc8 <stepInitWiFiModule+0x50>
+    efc4:	29 9a       	sbi	0x05, 1	; 5
+    efc6:	59 c1       	rjmp	.+690    	; 0xf27a <stepInitWiFiModule+0x302>
+    efc8:	84 36       	cpi	r24, 0x64	; 100
+    efca:	91 05       	cpc	r25, r1
+    efcc:	11 f4       	brne	.+4      	; 0xefd2 <stepInitWiFiModule+0x5a>
+    efce:	29 98       	cbi	0x05, 1	; 5
+    efd0:	54 c1       	rjmp	.+680    	; 0xf27a <stepInitWiFiModule+0x302>
+    efd2:	89 3e       	cpi	r24, 0xE9	; 233
+    efd4:	93 40       	sbci	r25, 0x03	; 3
+    efd6:	08 f4       	brcc	.+2      	; 0xefda <stepInitWiFiModule+0x62>
+    efd8:	50 c1       	rjmp	.+672    	; 0xf27a <stepInitWiFiModule+0x302>
+    efda:	81 e0       	ldi	r24, 0x01	; 1
+    efdc:	80 93 e5 03 	sts	0x03E5, r24	; 0x8003e5 <InitState.2175>
+    efe0:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    efe4:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    efe8:	48 c1       	rjmp	.+656    	; 0xf27a <stepInitWiFiModule+0x302>
+    efea:	8f e9       	ldi	r24, 0x9F	; 159
+    efec:	91 ee       	ldi	r25, 0xE1	; 225
+    efee:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    eff2:	82 e0       	ldi	r24, 0x02	; 2
+    eff4:	05 c0       	rjmp	.+10     	; 0xf000 <stepInitWiFiModule+0x88>
+    eff6:	88 e9       	ldi	r24, 0x98	; 152
+    eff8:	91 ee       	ldi	r25, 0xE1	; 225
+    effa:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    effe:	83 e0       	ldi	r24, 0x03	; 3
+    f000:	80 93 e2 03 	sts	0x03E2, r24	; 0x8003e2 <nextState.2176>
+    f004:	86 e1       	ldi	r24, 0x16	; 22
+    f006:	80 93 e5 03 	sts	0x03E5, r24	; 0x8003e5 <InitState.2175>
+    f00a:	37 c1       	rjmp	.+622    	; 0xf27a <stepInitWiFiModule+0x302>
+    f00c:	81 e9       	ldi	r24, 0x91	; 145
+    f00e:	91 ee       	ldi	r25, 0xE1	; 225
+    f010:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f014:	84 e0       	ldi	r24, 0x04	; 4
+    f016:	f4 cf       	rjmp	.-24     	; 0xf000 <stepInitWiFiModule+0x88>
+    f018:	84 ed       	ldi	r24, 0xD4	; 212
+    f01a:	90 ee       	ldi	r25, 0xE0	; 224
+    f01c:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f020:	86 e0       	ldi	r24, 0x06	; 6
+    f022:	ee cf       	rjmp	.-36     	; 0xf000 <stepInitWiFiModule+0x88>
+    f024:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    f028:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    f02c:	01 96       	adiw	r24, 0x01	; 1
+    f02e:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    f032:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    f036:	81 30       	cpi	r24, 0x01	; 1
+    f038:	91 05       	cpc	r25, r1
+    f03a:	19 f4       	brne	.+6      	; 0xf042 <stepInitWiFiModule+0xca>
+    f03c:	8c ed       	ldi	r24, 0xDC	; 220
+    f03e:	90 ee       	ldi	r25, 0xE0	; 224
+    f040:	e0 c0       	rjmp	.+448    	; 0xf202 <stepInitWiFiModule+0x28a>
+    f042:	89 3e       	cpi	r24, 0xE9	; 233
+    f044:	93 40       	sbci	r25, 0x03	; 3
+    f046:	30 f0       	brcs	.+12     	; 0xf054 <stepInitWiFiModule+0xdc>
+    f048:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    f04c:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    f050:	86 e0       	ldi	r24, 0x06	; 6
+    f052:	d9 cf       	rjmp	.-78     	; 0xf006 <stepInitWiFiModule+0x8e>
+    f054:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <getResponseType>
+    f058:	81 30       	cpi	r24, 0x01	; 1
+    f05a:	b1 f3       	breq	.-20     	; 0xf048 <stepInitWiFiModule+0xd0>
+    f05c:	0e 94 85 77 	call	0xef0a	; 0xef0a <getIsTX_Idle>
+    f060:	88 23       	and	r24, r24
+    f062:	09 f4       	brne	.+2      	; 0xf066 <stepInitWiFiModule+0xee>
+    f064:	0a c1       	rjmp	.+532    	; 0xf27a <stepInitWiFiModule+0x302>
+    f066:	80 91 e1 03 	lds	r24, 0x03E1	; 0x8003e1 <fBaudChanged.2178>
+    f06a:	81 11       	cpse	r24, r1
+    f06c:	06 c1       	rjmp	.+524    	; 0xf27a <stepInitWiFiModule+0x302>
+    f06e:	8c e0       	ldi	r24, 0x0C	; 12
+    f070:	0e 94 7f 77 	call	0xeefe	; 0xeefe <setUART_Baud>
+    f074:	81 e0       	ldi	r24, 0x01	; 1
+    f076:	80 93 e1 03 	sts	0x03E1, r24	; 0x8003e1 <fBaudChanged.2178>
+    f07a:	ff c0       	rjmp	.+510    	; 0xf27a <stepInitWiFiModule+0x302>
+    f07c:	80 e3       	ldi	r24, 0x30	; 48
+    f07e:	91 ee       	ldi	r25, 0xE1	; 225
+    f080:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f084:	87 e0       	ldi	r24, 0x07	; 7
+    f086:	bc cf       	rjmp	.-136    	; 0xf000 <stepInitWiFiModule+0x88>
+    f088:	8c ee       	ldi	r24, 0xEC	; 236
+    f08a:	91 ee       	ldi	r25, 0xE1	; 225
+    f08c:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f090:	88 e0       	ldi	r24, 0x08	; 8
+    f092:	b6 cf       	rjmp	.-148    	; 0xf000 <stepInitWiFiModule+0x88>
+    f094:	82 ee       	ldi	r24, 0xE2	; 226
+    f096:	91 ee       	ldi	r25, 0xE1	; 225
+    f098:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f09c:	89 e0       	ldi	r24, 0x09	; 9
+    f09e:	b0 cf       	rjmp	.-160    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0a0:	86 ed       	ldi	r24, 0xD6	; 214
+    f0a2:	91 ee       	ldi	r25, 0xE1	; 225
+    f0a4:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0a8:	8a e0       	ldi	r24, 0x0A	; 10
+    f0aa:	aa cf       	rjmp	.-172    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0ac:	85 ec       	ldi	r24, 0xC5	; 197
+    f0ae:	91 ee       	ldi	r25, 0xE1	; 225
+    f0b0:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0b4:	8b e0       	ldi	r24, 0x0B	; 11
+    f0b6:	a4 cf       	rjmp	.-184    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0b8:	8b eb       	ldi	r24, 0xBB	; 187
+    f0ba:	91 ee       	ldi	r25, 0xE1	; 225
+    f0bc:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0c0:	8c e0       	ldi	r24, 0x0C	; 12
+    f0c2:	9e cf       	rjmp	.-196    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0c4:	88 ea       	ldi	r24, 0xA8	; 168
+    f0c6:	91 ee       	ldi	r25, 0xE1	; 225
+    f0c8:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0cc:	8d e0       	ldi	r24, 0x0D	; 13
+    f0ce:	98 cf       	rjmp	.-208    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0d0:	8d e7       	ldi	r24, 0x7D	; 125
+    f0d2:	91 ee       	ldi	r25, 0xE1	; 225
+    f0d4:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0d8:	8e e0       	ldi	r24, 0x0E	; 14
+    f0da:	92 cf       	rjmp	.-220    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0dc:	8d e4       	ldi	r24, 0x4D	; 77
+    f0de:	91 ee       	ldi	r25, 0xE1	; 225
+    f0e0:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0e4:	8f e0       	ldi	r24, 0x0F	; 15
+    f0e6:	8c cf       	rjmp	.-232    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0e8:	8d e3       	ldi	r24, 0x3D	; 61
+    f0ea:	91 ee       	ldi	r25, 0xE1	; 225
+    f0ec:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f0f0:	80 e1       	ldi	r24, 0x10	; 16
+    f0f2:	86 cf       	rjmp	.-244    	; 0xf000 <stepInitWiFiModule+0x88>
+    f0f4:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    f0f8:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    f0fc:	01 96       	adiw	r24, 0x01	; 1
+    f0fe:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    f102:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    f106:	81 30       	cpi	r24, 0x01	; 1
+    f108:	91 05       	cpc	r25, r1
+    f10a:	89 f5       	brne	.+98     	; 0xf16e <stepInitWiFiModule+0x1f6>
+    f10c:	83 e4       	ldi	r24, 0x43	; 67
+    f10e:	89 83       	std	Y+1, r24	; 0x01
+    f110:	84 e4       	ldi	r24, 0x44	; 68
+    f112:	8a 83       	std	Y+2, r24	; 0x02
+    f114:	83 e5       	ldi	r24, 0x53	; 83
+    f116:	8b 83       	std	Y+3, r24	; 0x03
+    f118:	8a e4       	ldi	r24, 0x4A	; 74
+    f11a:	8c 83       	std	Y+4, r24	; 0x04
+    f11c:	82 e4       	ldi	r24, 0x42	; 66
+    f11e:	8d 83       	std	Y+5, r24	; 0x05
+    f120:	8f e5       	ldi	r24, 0x5F	; 95
+    f122:	8e 83       	std	Y+6, r24	; 0x06
+    f124:	8a ea       	ldi	r24, 0xAA	; 170
+    f126:	97 e0       	ldi	r25, 0x07	; 7
+    f128:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    f12c:	8f 83       	std	Y+7, r24	; 0x07
+    f12e:	8b ea       	ldi	r24, 0xAB	; 171
+    f130:	97 e0       	ldi	r25, 0x07	; 7
+    f132:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    f136:	88 87       	std	Y+8, r24	; 0x08
+    f138:	8c ea       	ldi	r24, 0xAC	; 172
+    f13a:	97 e0       	ldi	r25, 0x07	; 7
+    f13c:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    f140:	89 87       	std	Y+9, r24	; 0x09
+    f142:	8d ea       	ldi	r24, 0xAD	; 173
+    f144:	97 e0       	ldi	r25, 0x07	; 7
+    f146:	0e 94 c1 79 	call	0xf382	; 0xf382 <eeprom_read_byte>
+    f14a:	8a 87       	std	Y+10, r24	; 0x0a
+    f14c:	1b 86       	std	Y+11, r1	; 0x0b
+    f14e:	60 e0       	ldi	r22, 0x00	; 0
+    f150:	71 e0       	ldi	r23, 0x01	; 1
+    f152:	ce 01       	movw	r24, r28
+    f154:	0b 96       	adiw	r24, 0x0b	; 11
+    f156:	0e 94 ba 79 	call	0xf374	; 0xf374 <strcpy>
+    f15a:	8a e8       	ldi	r24, 0x8A	; 138
+    f15c:	91 ee       	ldi	r25, 0xE1	; 225
+    f15e:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f162:	60 e1       	ldi	r22, 0x10	; 16
+    f164:	ce 01       	movw	r24, r28
+    f166:	01 96       	adiw	r24, 0x01	; 1
+    f168:	0e 94 3f 77 	call	0xee7e	; 0xee7e <addBytesToWifiTxBuffer>
+    f16c:	86 c0       	rjmp	.+268    	; 0xf27a <stepInitWiFiModule+0x302>
+    f16e:	89 3e       	cpi	r24, 0xE9	; 233
+    f170:	93 40       	sbci	r25, 0x03	; 3
+    f172:	30 f0       	brcs	.+12     	; 0xf180 <stepInitWiFiModule+0x208>
+    f174:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    f178:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    f17c:	81 e1       	ldi	r24, 0x11	; 17
+    f17e:	43 cf       	rjmp	.-378    	; 0xf006 <stepInitWiFiModule+0x8e>
+    f180:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <getResponseType>
+    f184:	81 30       	cpi	r24, 0x01	; 1
+    f186:	09 f0       	breq	.+2      	; 0xf18a <stepInitWiFiModule+0x212>
+    f188:	78 c0       	rjmp	.+240    	; 0xf27a <stepInitWiFiModule+0x302>
+    f18a:	f4 cf       	rjmp	.-24     	; 0xf174 <stepInitWiFiModule+0x1fc>
+    f18c:	82 e0       	ldi	r24, 0x02	; 2
+    f18e:	91 ee       	ldi	r25, 0xE1	; 225
+    f190:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f194:	82 e1       	ldi	r24, 0x12	; 18
+    f196:	34 cf       	rjmp	.-408    	; 0xf000 <stepInitWiFiModule+0x88>
+    f198:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    f19c:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    f1a0:	01 96       	adiw	r24, 0x01	; 1
+    f1a2:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    f1a6:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    f1aa:	81 30       	cpi	r24, 0x01	; 1
+    f1ac:	91 05       	cpc	r25, r1
+    f1ae:	19 f4       	brne	.+6      	; 0xf1b6 <stepInitWiFiModule+0x23e>
+    f1b0:	81 e1       	ldi	r24, 0x11	; 17
+    f1b2:	91 ee       	ldi	r25, 0xE1	; 225
+    f1b4:	26 c0       	rjmp	.+76     	; 0xf202 <stepInitWiFiModule+0x28a>
+    f1b6:	8b 3f       	cpi	r24, 0xFB	; 251
+    f1b8:	91 05       	cpc	r25, r1
+    f1ba:	28 f0       	brcs	.+10     	; 0xf1c6 <stepInitWiFiModule+0x24e>
+    f1bc:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    f1c0:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    f1c4:	06 c0       	rjmp	.+12     	; 0xf1d2 <stepInitWiFiModule+0x25a>
+    f1c6:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <getResponseType>
+    f1ca:	82 30       	cpi	r24, 0x02	; 2
+    f1cc:	09 f0       	breq	.+2      	; 0xf1d0 <stepInitWiFiModule+0x258>
+    f1ce:	55 c0       	rjmp	.+170    	; 0xf27a <stepInitWiFiModule+0x302>
+    f1d0:	f5 cf       	rjmp	.-22     	; 0xf1bc <stepInitWiFiModule+0x244>
+    f1d2:	f9 99       	sbic	0x1f, 1	; 31
+    f1d4:	fe cf       	rjmp	.-4      	; 0xf1d2 <stepInitWiFiModule+0x25a>
+    f1d6:	60 91 e7 03 	lds	r22, 0x03E7	; 0x8003e7 <asipCID>
+    f1da:	80 e3       	ldi	r24, 0x30	; 48
+    f1dc:	97 e0       	ldi	r25, 0x07	; 7
+    f1de:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+    f1e2:	83 e1       	ldi	r24, 0x13	; 19
+    f1e4:	10 cf       	rjmp	.-480    	; 0xf006 <stepInitWiFiModule+0x8e>
+    f1e6:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    f1ea:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    f1ee:	01 96       	adiw	r24, 0x01	; 1
+    f1f0:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    f1f4:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    f1f8:	81 30       	cpi	r24, 0x01	; 1
+    f1fa:	91 05       	cpc	r25, r1
+    f1fc:	29 f4       	brne	.+10     	; 0xf208 <stepInitWiFiModule+0x290>
+    f1fe:	81 ef       	ldi	r24, 0xF1	; 241
+    f200:	90 ee       	ldi	r25, 0xE0	; 224
+    f202:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    f206:	39 c0       	rjmp	.+114    	; 0xf27a <stepInitWiFiModule+0x302>
+    f208:	8b 3f       	cpi	r24, 0xFB	; 251
+    f20a:	91 05       	cpc	r25, r1
+    f20c:	28 f0       	brcs	.+10     	; 0xf218 <stepInitWiFiModule+0x2a0>
+    f20e:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    f212:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    f216:	05 c0       	rjmp	.+10     	; 0xf222 <stepInitWiFiModule+0x2aa>
+    f218:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <getResponseType>
+    f21c:	83 30       	cpi	r24, 0x03	; 3
+    f21e:	69 f5       	brne	.+90     	; 0xf27a <stepInitWiFiModule+0x302>
+    f220:	f6 cf       	rjmp	.-20     	; 0xf20e <stepInitWiFiModule+0x296>
+    f222:	f9 99       	sbic	0x1f, 1	; 31
+    f224:	fe cf       	rjmp	.-4      	; 0xf222 <stepInitWiFiModule+0x2aa>
+    f226:	60 91 e6 03 	lds	r22, 0x03E6	; 0x8003e6 <asipServerCID>
+    f22a:	8f e2       	ldi	r24, 0x2F	; 47
+    f22c:	97 e0       	ldi	r25, 0x07	; 7
+    f22e:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+    f232:	85 e1       	ldi	r24, 0x15	; 21
+    f234:	e8 ce       	rjmp	.-560    	; 0xf006 <stepInitWiFiModule+0x8e>
+    f236:	29 9a       	sbi	0x05, 1	; 5
+    f238:	f9 99       	sbic	0x1f, 1	; 31
+    f23a:	fe cf       	rjmp	.-4      	; 0xf238 <stepInitWiFiModule+0x2c0>
+    f23c:	60 e0       	ldi	r22, 0x00	; 0
+    f23e:	81 e3       	ldi	r24, 0x31	; 49
+    f240:	97 e0       	ldi	r25, 0x07	; 7
+    f242:	0e 94 c9 79 	call	0xf392	; 0xf392 <eeprom_write_byte>
+    f246:	0e 94 0e 74 	call	0xe81c	; 0xe81c <setWifiDoneFlag>
+    f24a:	17 c0       	rjmp	.+46     	; 0xf27a <stepInitWiFiModule+0x302>
+    f24c:	80 91 e3 03 	lds	r24, 0x03E3	; 0x8003e3 <tickCount.2177>
+    f250:	90 91 e4 03 	lds	r25, 0x03E4	; 0x8003e4 <tickCount.2177+0x1>
+    f254:	01 96       	adiw	r24, 0x01	; 1
+    f256:	90 93 e4 03 	sts	0x03E4, r25	; 0x8003e4 <tickCount.2177+0x1>
+    f25a:	80 93 e3 03 	sts	0x03E3, r24	; 0x8003e3 <tickCount.2177>
+    f25e:	8b 3f       	cpi	r24, 0xFB	; 251
+    f260:	91 05       	cpc	r25, r1
+    f262:	38 f0       	brcs	.+14     	; 0xf272 <stepInitWiFiModule+0x2fa>
+    f264:	10 92 e4 03 	sts	0x03E4, r1	; 0x8003e4 <tickCount.2177+0x1>
+    f268:	10 92 e3 03 	sts	0x03E3, r1	; 0x8003e3 <tickCount.2177>
+    f26c:	80 91 e2 03 	lds	r24, 0x03E2	; 0x8003e2 <nextState.2176>
+    f270:	ca ce       	rjmp	.-620    	; 0xf006 <stepInitWiFiModule+0x8e>
+    f272:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <getResponseType>
+    f276:	81 30       	cpi	r24, 0x01	; 1
+    f278:	a9 f3       	breq	.-22     	; 0xf264 <stepInitWiFiModule+0x2ec>
+    f27a:	64 96       	adiw	r28, 0x14	; 20
+    f27c:	0f b6       	in	r0, 0x3f	; 63
+    f27e:	f8 94       	cli
+    f280:	de bf       	out	0x3e, r29	; 62
+    f282:	0f be       	out	0x3f, r0	; 63
+    f284:	cd bf       	out	0x3d, r28	; 61
+    f286:	df 91       	pop	r29
+    f288:	cf 91       	pop	r28
+    f28a:	08 95       	ret
+
+0000f28c <sendUdpPacket>:
+}
+
+
+void sendUdpPacket(AsipMsgStruct * pMessage)
+{
+    f28c:	0f 93       	push	r16
+    f28e:	1f 93       	push	r17
+    f290:	cf 93       	push	r28
+    f292:	df 93       	push	r29
+    f294:	cd b7       	in	r28, 0x3d	; 61
+    f296:	de b7       	in	r29, 0x3e	; 62
+    f298:	2a 97       	sbiw	r28, 0x0a	; 10
+    f29a:	0f b6       	in	r0, 0x3f	; 63
+    f29c:	f8 94       	cli
+    f29e:	de bf       	out	0x3e, r29	; 62
+    f2a0:	0f be       	out	0x3f, r0	; 63
+    f2a2:	cd bf       	out	0x3d, r28	; 61
+    f2a4:	8c 01       	movw	r16, r24
+    BYTE cmdBuffer[10];
+    BYTE remainder;
+    BYTE dataLen = pMessage->PayloadLength + 7; // Payload plus ASIP header/checksum
+    f2a6:	fc 01       	movw	r30, r24
+    f2a8:	32 81       	ldd	r19, Z+2	; 0x02
+    f2aa:	87 e0       	ldi	r24, 0x07	; 7
+    f2ac:	83 0f       	add	r24, r19
+    
+    // ========== WiFi Command ==========
+    // Connection ID
+    cmdBuffer[0] = asipCID + '0';
+    f2ae:	90 91 e7 03 	lds	r25, 0x03E7	; 0x8003e7 <asipCID>
+    f2b2:	90 5d       	subi	r25, 0xD0	; 208
+    f2b4:	99 83       	std	Y+1, r25	; 0x01
+    
+    // Convert the data length into a 4 digit string
+    cmdBuffer[1] = '0'; // Thousands
+    f2b6:	90 e3       	ldi	r25, 0x30	; 48
+    f2b8:	9a 83       	std	Y+2, r25	; 0x02
+    cmdBuffer[2] = (dataLen / 100) + '0'; // Hundreds
+    f2ba:	64 e6       	ldi	r22, 0x64	; 100
+    f2bc:	0e 94 98 79 	call	0xf330	; 0xf330 <__udivmodqi4>
+    f2c0:	20 e3       	ldi	r18, 0x30	; 48
+    f2c2:	28 0f       	add	r18, r24
+    f2c4:	2b 83       	std	Y+3, r18	; 0x03
+    remainder = dataLen % 100;
+    cmdBuffer[3] = (remainder / 10) + '0'; // Tens
+    f2c6:	89 2f       	mov	r24, r25
+    f2c8:	6a e0       	ldi	r22, 0x0A	; 10
+    f2ca:	0e 94 98 79 	call	0xf330	; 0xf330 <__udivmodqi4>
+    f2ce:	80 5d       	subi	r24, 0xD0	; 208
+    f2d0:	8c 83       	std	Y+4, r24	; 0x04
+    remainder = remainder % 10;
+    cmdBuffer[4] = remainder + '0'; // Ones
+    f2d2:	90 5d       	subi	r25, 0xD0	; 208
+    f2d4:	9d 83       	std	Y+5, r25	; 0x05
+    
+    // ========== ASIP Message ==========
+    // Start of ASIP Frame
+    cmdBuffer[5] = 0xC2;
+    f2d6:	82 ec       	ldi	r24, 0xC2	; 194
+    f2d8:	8e 83       	std	Y+6, r24	; 0x06
+    cmdBuffer[6] = 0x53;
+    f2da:	83 e5       	ldi	r24, 0x53	; 83
+    f2dc:	8f 83       	std	Y+7, r24	; 0x07
+    cmdBuffer[7] = pMessage->MsgClass;
+    f2de:	80 81       	ld	r24, Z
+    f2e0:	88 87       	std	Y+8, r24	; 0x08
+    cmdBuffer[8] = pMessage->MsgId;
+    f2e2:	81 81       	ldd	r24, Z+1	; 0x01
+    f2e4:	89 87       	std	Y+9, r24	; 0x09
+    cmdBuffer[9] = pMessage->PayloadLength;
+    f2e6:	3a 87       	std	Y+10, r19	; 0x0a
+    
+    sendWifiCommand(udpBulkTransferSeq);
+    f2e8:	8e ee       	ldi	r24, 0xEE	; 238
+    f2ea:	90 ee       	ldi	r25, 0xE0	; 224
+    f2ec:	0e 94 97 77 	call	0xef2e	; 0xef2e <sendWifiCommand>
+    addBytesToWifiTxBuffer(cmdBuffer, 10);
+    f2f0:	6a e0       	ldi	r22, 0x0A	; 10
+    f2f2:	ce 01       	movw	r24, r28
+    f2f4:	01 96       	adiw	r24, 0x01	; 1
+    f2f6:	0e 94 3f 77 	call	0xee7e	; 0xee7e <addBytesToWifiTxBuffer>
+    // Add in payload
+    addBytesToWifiTxBuffer(pMessage->PayloadPtr, pMessage->PayloadLength);
+    f2fa:	f8 01       	movw	r30, r16
+    f2fc:	62 81       	ldd	r22, Z+2	; 0x02
+    f2fe:	83 81       	ldd	r24, Z+3	; 0x03
+    f300:	94 81       	ldd	r25, Z+4	; 0x04
+    f302:	0e 94 3f 77 	call	0xee7e	; 0xee7e <addBytesToWifiTxBuffer>
+    // Add in checksum bytes
+    cmdBuffer[0] = pMessage->Checksum1;
+    f306:	f8 01       	movw	r30, r16
+    f308:	85 81       	ldd	r24, Z+5	; 0x05
+    f30a:	89 83       	std	Y+1, r24	; 0x01
+    cmdBuffer[1] = pMessage->Checksum2;
+    f30c:	86 81       	ldd	r24, Z+6	; 0x06
+    f30e:	8a 83       	std	Y+2, r24	; 0x02
+    addBytesToWifiTxBuffer(cmdBuffer, 2);
+    f310:	62 e0       	ldi	r22, 0x02	; 2
+    f312:	ce 01       	movw	r24, r28
+    f314:	01 96       	adiw	r24, 0x01	; 1
+    f316:	0e 94 3f 77 	call	0xee7e	; 0xee7e <addBytesToWifiTxBuffer>
+}
+    f31a:	2a 96       	adiw	r28, 0x0a	; 10
+    f31c:	0f b6       	in	r0, 0x3f	; 63
+    f31e:	f8 94       	cli
+    f320:	de bf       	out	0x3e, r29	; 62
+    f322:	0f be       	out	0x3f, r0	; 63
+    f324:	cd bf       	out	0x3d, r28	; 61
+    f326:	df 91       	pop	r29
+    f328:	cf 91       	pop	r28
+    f32a:	1f 91       	pop	r17
+    f32c:	0f 91       	pop	r16
+    f32e:	08 95       	ret
+
+0000f330 <__udivmodqi4>:
+    f330:	99 1b       	sub	r25, r25
+    f332:	79 e0       	ldi	r23, 0x09	; 9
+    f334:	04 c0       	rjmp	.+8      	; 0xf33e <__udivmodqi4_ep>
+
+0000f336 <__udivmodqi4_loop>:
+    f336:	99 1f       	adc	r25, r25
+    f338:	96 17       	cp	r25, r22
+    f33a:	08 f0       	brcs	.+2      	; 0xf33e <__udivmodqi4_ep>
+    f33c:	96 1b       	sub	r25, r22
+
+0000f33e <__udivmodqi4_ep>:
+    f33e:	88 1f       	adc	r24, r24
+    f340:	7a 95       	dec	r23
+    f342:	c9 f7       	brne	.-14     	; 0xf336 <__udivmodqi4_loop>
+    f344:	80 95       	com	r24
+    f346:	08 95       	ret
+
+0000f348 <__tablejump2__>:
+    f348:	ee 0f       	add	r30, r30
+    f34a:	ff 1f       	adc	r31, r31
+    f34c:	05 90       	lpm	r0, Z+
+    f34e:	f4 91       	lpm	r31, Z
+    f350:	e0 2d       	mov	r30, r0
+    f352:	09 94       	ijmp
+
+0000f354 <strcpy_P>:
+    f354:	fb 01       	movw	r30, r22
+    f356:	dc 01       	movw	r26, r24
+    f358:	05 90       	lpm	r0, Z+
+    f35a:	0d 92       	st	X+, r0
+    f35c:	00 20       	and	r0, r0
+    f35e:	e1 f7       	brne	.-8      	; 0xf358 <strcpy_P+0x4>
+    f360:	08 95       	ret
+
+0000f362 <__strlen_P>:
+    f362:	fc 01       	movw	r30, r24
+    f364:	05 90       	lpm	r0, Z+
+    f366:	00 20       	and	r0, r0
+    f368:	e9 f7       	brne	.-6      	; 0xf364 <__strlen_P+0x2>
+    f36a:	80 95       	com	r24
+    f36c:	90 95       	com	r25
+    f36e:	8e 0f       	add	r24, r30
+    f370:	9f 1f       	adc	r25, r31
+    f372:	08 95       	ret
+
+0000f374 <strcpy>:
+    f374:	fb 01       	movw	r30, r22
+    f376:	dc 01       	movw	r26, r24
+    f378:	01 90       	ld	r0, Z+
+    f37a:	0d 92       	st	X+, r0
+    f37c:	00 20       	and	r0, r0
+    f37e:	e1 f7       	brne	.-8      	; 0xf378 <strcpy+0x4>
+    f380:	08 95       	ret
+
+0000f382 <eeprom_read_byte>:
+    f382:	f9 99       	sbic	0x1f, 1	; 31
+    f384:	fe cf       	rjmp	.-4      	; 0xf382 <eeprom_read_byte>
+    f386:	92 bd       	out	0x22, r25	; 34
+    f388:	81 bd       	out	0x21, r24	; 33
+    f38a:	f8 9a       	sbi	0x1f, 0	; 31
+    f38c:	99 27       	eor	r25, r25
+    f38e:	80 b5       	in	r24, 0x20	; 32
+    f390:	08 95       	ret
+
+0000f392 <eeprom_write_byte>:
+    f392:	26 2f       	mov	r18, r22
+
+0000f394 <eeprom_write_r18>:
+    f394:	f9 99       	sbic	0x1f, 1	; 31
+    f396:	fe cf       	rjmp	.-4      	; 0xf394 <eeprom_write_r18>
+    f398:	1f ba       	out	0x1f, r1	; 31
+    f39a:	92 bd       	out	0x22, r25	; 34
+    f39c:	81 bd       	out	0x21, r24	; 33
+    f39e:	20 bd       	out	0x20, r18	; 32
+    f3a0:	0f b6       	in	r0, 0x3f	; 63
+    f3a2:	f8 94       	cli
+    f3a4:	fa 9a       	sbi	0x1f, 2	; 31
+    f3a6:	f9 9a       	sbi	0x1f, 1	; 31
+    f3a8:	0f be       	out	0x3f, r0	; 63
+    f3aa:	01 96       	adiw	r24, 0x01	; 1
+    f3ac:	08 95       	ret
+
+0000f3ae <_exit>:
+    f3ae:	f8 94       	cli
+
+0000f3b0 <__stop_program>:
+    f3b0:	ff cf       	rjmp	.-2      	; 0xf3b0 <__stop_program>

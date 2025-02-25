@@ -1,0 +1,915 @@
+Archive member included to satisfy reference by file (symbol)
+
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+                              source/WiFiModule.o (__udivmodqi4)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                              G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o (exit)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                              source/ASIP.o (__tablejump2__)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                              source/ASIP.o (__do_copy_data)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                              source/ASIP.o (__do_clear_bss)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+                              source/SensorModuleWirelessBoot.o (strcpy_P)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strlen_P.o)
+                              source/WiFiModule.o (__strlen_P)
+g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                              source/WiFiModule.o (strcpy)
+G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+                              source/SensorModuleWirelessBoot.o (eeprom_read_byte)
+G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+                              source/SensorModuleWirelessBoot.o (eeprom_write_byte)
+
+Allocating common symbols
+Common symbol       size              file
+
+p                   0x2               source/WiFiModule.o
+gdwTickCount        0x4               source/SensorModuleWirelessBoot.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .bss           0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .text          0x00000000        0x0 source/ASIP.o
+ .data          0x00000000        0x0 source/ASIP.o
+ .bss           0x00000000        0x0 source/ASIP.o
+ .text.resetAsipStateMachine
+                0x00000000        0xe source/ASIP.o
+ .text.getDeviceUpdateMsgReceivedFlag
+                0x00000000        0x6 source/ASIP.o
+ .text.clearDeviceUpdateMsgReceivedFlag
+                0x00000000        0x6 source/ASIP.o
+ .text.transmitTcpAsipMessage
+                0x00000000        0x8 source/ASIP.o
+ .bss.deviceUpdateMsgReceivedFlag
+                0x00000000        0x1 source/ASIP.o
+ .rodata        0x00000000        0xf source/ASIP.o
+ .data.connectResponsePtr
+                0x00000000        0x2 source/ASIP.o
+ .data.commandSuccessfulPtr
+                0x00000000        0x2 source/ASIP.o
+ .text          0x00000000        0x0 source/ELF_Data.o
+ .data          0x00000000        0x0 source/ELF_Data.o
+ .bss           0x00000000        0x0 source/ELF_Data.o
+ .text          0x00000000        0x0 source/SensorModuleWirelessBoot.o
+ .data          0x00000000        0x0 source/SensorModuleWirelessBoot.o
+ .bss           0x00000000        0x0 source/SensorModuleWirelessBoot.o
+ COMMON         0x00000000        0x4 source/SensorModuleWirelessBoot.o
+ .text          0x00000000        0x0 source/UART.o
+ .data          0x00000000        0x0 source/UART.o
+ .bss           0x00000000        0x0 source/UART.o
+ .text.setExpectedWifiResponse
+                0x00000000        0x2 source/UART.o
+ .text          0x00000000        0x0 source/WiFiModule.o
+ .data          0x00000000        0x0 source/WiFiModule.o
+ .bss           0x00000000        0x0 source/WiFiModule.o
+ .text.getWifiReadyFlag
+                0x00000000        0x4 source/WiFiModule.o
+ .text.setAsipCID
+                0x00000000       0x14 source/WiFiModule.o
+ .text.getAsipServerCID
+                0x00000000        0x6 source/WiFiModule.o
+ .text.setupFwUpdateTcpPort
+                0x00000000        0x8 source/WiFiModule.o
+ .text.sendTcpPacket
+                0x00000000       0xa0 source/WiFiModule.o
+ .progmem.data.setBaudRateCommand
+                0x00000000       0x13 source/WiFiModule.o
+ .progmem.data.udpBulkTransferEnd
+                0x00000000       0x15 source/WiFiModule.o
+ .progmem.data.startTcpServerCommand
+                0x00000000       0x11 source/WiFiModule.o
+ .progmem.data.setEchoEnableCommand
+                0x00000000        0x7 source/WiFiModule.o
+ COMMON         0x00000000        0x2 source/WiFiModule.o
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc   0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strlen_P.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strlen_P.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strlen_P.o)
+ .text          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ .data          0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ .bss           0x00000000        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ .text          0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .data          0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .bss           0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .text          0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+ .data          0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+ .bss           0x00000000        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00010000         xr
+data             0x00800100         0x00001000         rw !x
+eeprom           0x00810000         0x00000800         rw !x
+fuse             0x00820000         0x00000003         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+LOAD source/ASIP.o
+LOAD source/ELF_Data.o
+LOAD source/SensorModuleWirelessBoot.o
+LOAD source/UART.o
+LOAD source/WiFiModule.o
+START GROUP
+LOAD g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+END GROUP
+Address of section .text set to 0xe000
+START GROUP
+LOAD g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
+LOAD G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a
+END GROUP
+                0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x00010000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x00001000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000800]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000e000     0x13b2
+ *(.vectors)
+ .vectors       0x0000e000       0x7c G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+                0x0000e000                __vector_default
+                0x0000e000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.stepAsipStateMachine
+                0x0000e07c       0x10 source/ASIP.o
+ .progmem.gcc_sw_table.stepInitWiFiModule
+                0x0000e08c       0x2e source/WiFiModule.o
+                0x0000e0ba                . = ALIGN (0x2)
+                0x0000e0ba                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000e0ba        0x0 linker stubs
+ *(.trampolines*)
+                0x0000e0ba                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data.FwVersion
+                0x0000e0ba        0x9 source/SensorModuleWirelessBoot.o
+                0x0000e0ba                FwVersion
+ .progmem.data.FwPartNum
+                0x0000e0c3       0x11 source/SensorModuleWirelessBoot.o
+                0x0000e0c3                FwPartNum
+ .progmem.data.setFlowControlCommand
+                0x0000e0d4        0x8 source/WiFiModule.o
+                0x0000e0d4                setFlowControlCommand
+ .progmem.data.setBaudRateCommand2
+                0x0000e0dc       0x12 source/WiFiModule.o
+                0x0000e0dc                setBaudRateCommand2
+ .progmem.data.udpBulkTransferSeq
+                0x0000e0ee        0x3 source/WiFiModule.o
+                0x0000e0ee                udpBulkTransferSeq
+ .progmem.data.startUdpServerCommand
+                0x0000e0f1       0x11 source/WiFiModule.o
+                0x0000e0f1                startUdpServerCommand
+ .progmem.data.closeAllConnectionsCommand
+                0x0000e102        0xf source/WiFiModule.o
+                0x0000e102                closeAllConnectionsCommand
+ .progmem.data.udpOutConnectCommand
+                0x0000e111       0x1f source/WiFiModule.o
+                0x0000e111                udpOutConnectCommand
+ .progmem.data.setBulkTransfer
+                0x0000e130        0xd source/WiFiModule.o
+                0x0000e130                setBulkTransfer
+ .progmem.data.setDHCPServerCommand
+                0x0000e13d       0x10 source/WiFiModule.o
+                0x0000e13d                setDHCPServerCommand
+ .progmem.data.setNetParamsCommand
+                0x0000e14d       0x30 source/WiFiModule.o
+                0x0000e14d                setNetParamsCommand
+ .progmem.data.setDHCPCommand
+                0x0000e17d        0xd source/WiFiModule.o
+                0x0000e17d                setDHCPCommand
+ .progmem.data.setSSIDCommand
+                0x0000e18a        0x7 source/WiFiModule.o
+                0x0000e18a                setSSIDCommand
+ .progmem.data.setEchoDisableCommand
+                0x0000e191        0x7 source/WiFiModule.o
+                0x0000e191                setEchoDisableCommand
+ .progmem.data.setVerboseEnableCommand
+                0x0000e198        0x7 source/WiFiModule.o
+                0x0000e198                setVerboseEnableCommand
+ .progmem.data.setATSyncCommand
+                0x0000e19f        0x9 source/WiFiModule.o
+                0x0000e19f                setATSyncCommand
+ .progmem.data.setKeepAliveCommand
+                0x0000e1a8       0x13 source/WiFiModule.o
+                0x0000e1a8                setKeepAliveCommand
+ .progmem.data.setTransmitPowerCommand
+                0x0000e1bb        0xa source/WiFiModule.o
+                0x0000e1bb                setTransmitPowerCommand
+ .progmem.data.setRadioOpEnableCommand
+                0x0000e1c5       0x11 source/WiFiModule.o
+                0x0000e1c5                setRadioOpEnableCommand
+ .progmem.data.setSecurityCommand
+                0x0000e1d6        0xc source/WiFiModule.o
+                0x0000e1d6                setSecurityCommand
+ .progmem.data.setOpModeCommand
+                0x0000e1e2        0xa source/WiFiModule.o
+                0x0000e1e2                setOpModeCommand
+ .progmem.data.setRegulatoryDomainCommand
+                0x0000e1ec       0x12 source/WiFiModule.o
+                0x0000e1ec                setRegulatoryDomainCommand
+                0x0000e1fe                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000e1fe                __ctors_start = .
+ *(.ctors)
+                0x0000e1fe                __ctors_end = .
+                0x0000e1fe                __dtors_start = .
+ *(.dtors)
+                0x0000e1fe                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000e1fe        0x0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+                0x0000e1fe                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000e1fe        0xc G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000e20a       0x16 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x0000e20a                __do_copy_data
+ .init4         0x0000e220       0x10 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000e220                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000e230        0x8 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ *(.init9)
+ *(.text)
+ .text          0x0000e238        0x4 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+                0x0000e238                __vector_22
+                0x0000e238                __vector_28
+                0x0000e238                __vector_1
+                0x0000e238                __vector_24
+                0x0000e238                __bad_interrupt
+                0x0000e238                __vector_6
+                0x0000e238                __vector_3
+                0x0000e238                __vector_23
+                0x0000e238                __vector_30
+                0x0000e238                __vector_25
+                0x0000e238                __vector_11
+                0x0000e238                __vector_13
+                0x0000e238                __vector_17
+                0x0000e238                __vector_19
+                0x0000e238                __vector_7
+                0x0000e238                __vector_27
+                0x0000e238                __vector_5
+                0x0000e238                __vector_4
+                0x0000e238                __vector_9
+                0x0000e238                __vector_2
+                0x0000e238                __vector_15
+                0x0000e238                __vector_29
+                0x0000e238                __vector_8
+                0x0000e238                __vector_26
+                0x0000e238                __vector_14
+                0x0000e238                __vector_10
+                0x0000e238                __vector_16
+                0x0000e238                __vector_18
+                0x0000e23c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.addByteToChecksum
+                0x0000e23c       0x5a source/ASIP.o
+ .text.resetChecksum
+                0x0000e296       0x20 source/ASIP.o
+ .text.transmitAddByteToChecksum
+                0x0000e2b6       0x5a source/ASIP.o
+ .text.stepAsipStateMachine
+                0x0000e310       0xde source/ASIP.o
+                0x0000e310                stepAsipStateMachine
+ .text.getResponseType
+                0x0000e3ee        0xa source/ASIP.o
+                0x0000e3ee                getResponseType
+ .text.buildAsipTransmitMessage
+                0x0000e3f8       0x9a source/ASIP.o
+                0x0000e3f8                buildAsipTransmitMessage
+ .text.transmitAsipMessage
+                0x0000e492        0x8 source/ASIP.o
+                0x0000e492                transmitAsipMessage
+ .text.processValidAsipMessages
+                0x0000e49a      0x298 source/ASIP.o
+                0x0000e49a                processValidAsipMessages
+ .text.getReceivedChecksum
+                0x0000e732       0x12 source/ASIP.o
+                0x0000e732                getReceivedChecksum
+ .text.JumpToApp
+                0x0000e744       0x10 source/SensorModuleWirelessBoot.o
+ .text.getPageBufferUsed
+                0x0000e754       0x2c source/SensorModuleWirelessBoot.o
+ .text.popPageBuffer
+                0x0000e780       0x40 source/SensorModuleWirelessBoot.o
+ .text.__vector_12
+                0x0000e7c0       0x32 source/SensorModuleWirelessBoot.o
+                0x0000e7c0                __vector_12
+ .text.sendReadyForFwUpdate
+                0x0000e7f2       0x2a source/SensorModuleWirelessBoot.o
+                0x0000e7f2                sendReadyForFwUpdate
+ .text.setWifiDoneFlag
+                0x0000e81c        0x8 source/SensorModuleWirelessBoot.o
+                0x0000e81c                setWifiDoneFlag
+ .text.startup.main
+                0x0000e824      0x3f0 source/SensorModuleWirelessBoot.o
+                0x0000e824                main
+ .text.pushPageBuffer
+                0x0000ec14       0x6c source/SensorModuleWirelessBoot.o
+                0x0000ec14                pushPageBuffer
+ .text.setFwUpdateCompleteFlag
+                0x0000ec80        0x8 source/SensorModuleWirelessBoot.o
+                0x0000ec80                setFwUpdateCompleteFlag
+ .text.readHwPartNum
+                0x0000ec88       0x32 source/SensorModuleWirelessBoot.o
+                0x0000ec88                readHwPartNum
+ .text.readHwVersion
+                0x0000ecba       0x32 source/SensorModuleWirelessBoot.o
+                0x0000ecba                readHwVersion
+ .text.readFwPartNum
+                0x0000ecec        0x8 source/SensorModuleWirelessBoot.o
+                0x0000ecec                readFwPartNum
+ .text.getSerialNumPtr
+                0x0000ecf4        0x6 source/SensorModuleWirelessBoot.o
+                0x0000ecf4                getSerialNumPtr
+ .text.getFwVersionPtr
+                0x0000ecfa        0x6 source/SensorModuleWirelessBoot.o
+                0x0000ecfa                getFwVersionPtr
+ .text.compareSerialNums
+                0x0000ed00       0x22 source/SensorModuleWirelessBoot.o
+                0x0000ed00                compareSerialNums
+ .text.initUART
+                0x0000ed22       0x3c source/UART.o
+                0x0000ed22                initUART
+ .text.__vector_21
+                0x0000ed5e       0x64 source/UART.o
+                0x0000ed5e                __vector_21
+ .text.__vector_20
+                0x0000edc2       0x9a source/UART.o
+                0x0000edc2                __vector_20
+ .text.getUART_TxBytesFree
+                0x0000ee5c       0x22 source/UART.o
+                0x0000ee5c                getUART_TxBytesFree
+ .text.addBytesToWifiTxBuffer
+                0x0000ee7e       0x80 source/UART.o
+                0x0000ee7e                addBytesToWifiTxBuffer
+ .text.setUART_Baud
+                0x0000eefe        0xc source/UART.o
+                0x0000eefe                setUART_Baud
+ .text.getIsTX_Idle
+                0x0000ef0a       0x20 source/UART.o
+                0x0000ef0a                getIsTX_Idle
+ .text.setWifiResetHigh
+                0x0000ef2a        0x4 source/WiFiModule.o
+                0x0000ef2a                setWifiResetHigh
+ .text.sendWifiCommand
+                0x0000ef2e       0x4a source/WiFiModule.o
+                0x0000ef2e                sendWifiCommand
+ .text.stepInitWiFiModule
+                0x0000ef78      0x314 source/WiFiModule.o
+                0x0000ef78                stepInitWiFiModule
+ .text.sendUdpPacket
+                0x0000f28c       0xa4 source/WiFiModule.o
+                0x0000f28c                sendUdpPacket
+ .text.libgcc.div
+                0x0000f330       0x18 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodqi4.o)
+                0x0000f330                __udivmodqi4
+ .text.libgcc   0x0000f348        0xc g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000f348                __tablejump2__
+ .text.avr-libc
+                0x0000f354        0xe g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy_P.o)
+                0x0000f354                strcpy_P
+ .text.avr-libc
+                0x0000f362       0x12 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strlen_P.o)
+                0x0000f362                __strlen_P
+ .text.avr-libc
+                0x0000f374        0xe g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x0000f374                strcpy
+ .text.avr-libc
+                0x0000f382       0x10 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+                0x0000f382                eeprom_read_byte
+ .text.avr-libc
+                0x0000f392       0x1c G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+                0x0000f392                eeprom_write_byte
+                0x0000f394                eeprom_write_r18
+                0x0000f3ae                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000f3ae        0x0 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000f3ae                _exit
+                0x0000f3ae                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000f3ae        0x4 g:/programfiles/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000f3b2                _etext = .
+
+.data           0x00800100        0x6 load address 0x0000f3b2
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800100        0x6 source/WiFiModule.o
+ *(.gnu.linkonce.r*)
+                0x00800106                . = ALIGN (0x2)
+                0x00800106                _edata = .
+                0x00800106                PROVIDE (__data_end, .)
+
+.bss            0x00800106      0x2e2
+                0x00800106                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.receivedChecksum
+                0x00800106        0x4 source/ASIP.o
+ .bss.scbBytesWrittenInPacket
+                0x0080010a        0x2 source/ASIP.o
+ .bss.scdwNextWriteAddress
+                0x0080010c        0x4 source/ASIP.o
+ .bss.transmitFinalChecksum2
+                0x00800110        0x1 source/ASIP.o
+ .bss.transmitFinalChecksum1
+                0x00800111        0x1 source/ASIP.o
+ .bss.transmitRunningChecksum2
+                0x00800112        0x2 source/ASIP.o
+ .bss.transmitRunningChecksum1
+                0x00800114        0x2 source/ASIP.o
+ .bss.runningCS2
+                0x00800116        0x2 source/ASIP.o
+ .bss.runningCS1
+                0x00800118        0x2 source/ASIP.o
+ .bss.outgoingMsg
+                0x0080011a        0x7 source/ASIP.o
+ .bss.ASIPMessageReady
+                0x00800121        0x1 source/ASIP.o
+ .bss.PayloadCount
+                0x00800122        0x1 source/ASIP.o
+ .bss.PayloadIndex
+                0x00800123        0x1 source/ASIP.o
+ .bss.responseType
+                0x00800124        0x1 source/ASIP.o
+ .bss.Msg_CS2   0x00800125        0x1 source/ASIP.o
+ .bss.Msg_CS1   0x00800126        0x1 source/ASIP.o
+ .bss.Msg_Payload
+                0x00800127      0x100 source/ASIP.o
+ .bss.Msg_Length
+                0x00800227        0x1 source/ASIP.o
+ .bss.Msg_ID    0x00800228        0x1 source/ASIP.o
+ .bss.Msg_Class
+                0x00800229        0x1 source/ASIP.o
+ .bss.AsipSMState
+                0x0080022a        0x1 source/ASIP.o
+ .bss.flashCount
+                0x0080022b        0x2 source/SensorModuleWirelessBoot.o
+ .bss.serialNum
+                0x0080022d        0xa source/SensorModuleWirelessBoot.o
+ .bss.wifiConfigDone
+                0x00800237        0x1 source/SensorModuleWirelessBoot.o
+ .bss.fwUpdateCompleteFlag
+                0x00800238        0x1 source/SensorModuleWirelessBoot.o
+ .bss.startBootMsgSent
+                0x00800239        0x1 source/SensorModuleWirelessBoot.o
+ .bss.appErrorMsgSent
+                0x0080023a        0x1 source/SensorModuleWirelessBoot.o
+ .bss.fwVersion
+                0x0080023b       0x10 source/SensorModuleWirelessBoot.o
+ .bss.scbyChksm3
+                0x0080024b        0x4 source/SensorModuleWirelessBoot.o
+ .bss.scbyChksm2
+                0x0080024f        0x4 source/SensorModuleWirelessBoot.o
+ .bss.scdwAddress
+                0x00800253        0x4 source/SensorModuleWirelessBoot.o
+ .bss.scwProgPgTail
+                0x00800257        0x2 source/SensorModuleWirelessBoot.o
+ .bss.scwProgPgHead
+                0x00800259        0x2 source/SensorModuleWirelessBoot.o
+ .bss.scbyProgPgBuff
+                0x0080025b      0x101 source/SensorModuleWirelessBoot.o
+ .bss.scbyTicksPending
+                0x0080035c        0x1 source/SensorModuleWirelessBoot.o
+ .bss.scbyCurrentTick
+                0x0080035d        0x1 source/SensorModuleWirelessBoot.o
+ .bss.scfTX_Active
+                0x0080035e        0x1 source/UART.o
+ .bss.wifiTxBufferTail
+                0x0080035f        0x1 source/UART.o
+ .bss.wifiTxBufferHead
+                0x00800360        0x1 source/UART.o
+ .bss.wifiTxBuffer
+                0x00800361       0x80 source/UART.o
+ .bss.fBaudChanged.2178
+                0x008003e1        0x1 source/WiFiModule.o
+ .bss.nextState.2176
+                0x008003e2        0x1 source/WiFiModule.o
+ .bss.tickCount.2177
+                0x008003e3        0x2 source/WiFiModule.o
+ .bss.InitState.2175
+                0x008003e5        0x1 source/WiFiModule.o
+ .bss.asipServerCID
+                0x008003e6        0x1 source/WiFiModule.o
+ .bss.asipCID   0x008003e7        0x1 source/WiFiModule.o
+ *(COMMON)
+                0x008003e8                PROVIDE (__bss_end, .)
+                0x0000f3b2                __data_load_start = LOADADDR (.data)
+                0x0000f3b8                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008003e8        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x008003e8                _end = .
+                [!provide]                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000      0x800
+ *(.eeprom*)
+ .eeprom        0x00810000      0x800 source/ELF_Data.o
+                0x00810000                eeprdata
+                0x00810800                __eeprom_end = .
+
+.fuse           0x00820000        0x3
+ *(.fuse)
+ .fuse          0x00820000        0x3 source/ELF_Data.o
+                0x00820000                fusedata
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock           0x00830000        0x1
+ *(.lock*)
+ .lockbits      0x00830000        0x1 source/ELF_Data.o
+                0x00830000                lockbits
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 source/ASIP.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000030       0x31 source/ELF_Data.o
+ .comment       0x00000030       0x31 source/SensorModuleWirelessBoot.o
+ .comment       0x00000030       0x31 source/UART.o
+ .comment       0x00000030       0x31 source/WiFiModule.o
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x220
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x80 source/ASIP.o
+ .debug_aranges
+                0x00000080       0x18 source/ELF_Data.o
+ .debug_aranges
+                0x00000098       0x90 source/SensorModuleWirelessBoot.o
+ .debug_aranges
+                0x00000128       0x58 source/UART.o
+ .debug_aranges
+                0x00000180       0x60 source/WiFiModule.o
+ .debug_aranges
+                0x000001e0       0x20 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .debug_aranges
+                0x00000200       0x20 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2ecd
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0xa40 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .debug_info    0x00000a40      0x990 source/ASIP.o
+ .debug_info    0x000013d0       0xdf source/ELF_Data.o
+ .debug_info    0x000014af      0x95e source/SensorModuleWirelessBoot.o
+ .debug_info    0x00001e0d      0x285 source/UART.o
+ .debug_info    0x00002092      0xd07 source/WiFiModule.o
+ .debug_info    0x00002d99       0x9a G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .debug_info    0x00002e33       0x9a G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+
+.debug_abbrev   0x00000000     0x1419
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x9b2 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .debug_abbrev  0x000009b2      0x312 source/ASIP.o
+ .debug_abbrev  0x00000cc4       0x59 source/ELF_Data.o
+ .debug_abbrev  0x00000d1d      0x2f8 source/SensorModuleWirelessBoot.o
+ .debug_abbrev  0x00001015      0x18c source/UART.o
+ .debug_abbrev  0x000011a1      0x250 source/WiFiModule.o
+ .debug_abbrev  0x000013f1       0x14 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .debug_abbrev  0x00001405       0x14 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+
+.debug_line     0x00000000     0x16f0
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x151 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .debug_line    0x00000151      0x52b source/ASIP.o
+ .debug_line    0x0000067c       0x32 source/ELF_Data.o
+ .debug_line    0x000006ae      0x6f4 source/SensorModuleWirelessBoot.o
+ .debug_line    0x00000da2      0x293 source/UART.o
+ .debug_line    0x00001035      0x5a3 source/WiFiModule.o
+ .debug_line    0x000015d8       0x7a G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eerd_byte.o)
+ .debug_line    0x00001652       0x9e G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5\libatmega64m1.a(eewr_byte.o)
+
+.debug_frame    0x00000000      0x4c4
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x124 source/ASIP.o
+ .debug_frame   0x00000124      0x164 source/SensorModuleWirelessBoot.o
+ .debug_frame   0x00000288      0x134 source/UART.o
+ .debug_frame   0x000003bc      0x108 source/WiFiModule.o
+
+.debug_str      0x00000000     0x146c
+ *(.debug_str)
+ .debug_str     0x00000000      0x3d0 G:/ProgramFiles/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega64m1/avr5/crtatmega64m1.o
+ .debug_str     0x000003d0      0x713 source/ASIP.o
+                                0x76a (size before relaxing)
+ .debug_str     0x00000ae3       0x30 source/ELF_Data.o
+                                0x1d2 (size before relaxing)
+ .debug_str     0x00000b13      0x307 source/SensorModuleWirelessBoot.o
+                                0x5fc (size before relaxing)
+ .debug_str     0x00000e1a       0xfb source/UART.o
+                                0x2f8 (size before relaxing)
+ .debug_str     0x00000f15      0x557 source/WiFiModule.o
+                                0x83f (size before relaxing)
+
+.debug_loc      0x00000000      0xfbb
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x439 source/ASIP.o
+ .debug_loc     0x00000439      0x5c7 source/SensorModuleWirelessBoot.o
+ .debug_loc     0x00000a00      0x2f0 source/UART.o
+ .debug_loc     0x00000cf0      0x2cb source/WiFiModule.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x188
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x70 source/ASIP.o
+ .debug_ranges  0x00000070       0x80 source/SensorModuleWirelessBoot.o
+ .debug_ranges  0x000000f0       0x48 source/UART.o
+ .debug_ranges  0x00000138       0x50 source/WiFiModule.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(SensorModuleWirelessBoot.elf elf32-avr)
+LOAD linker stubs
